@@ -21,7 +21,7 @@ export default class BodyText extends React.Component {
     render() {
         return <div className="column body-text">
 
-                <p>{this.props.text}</p>
+                <p></p>
 
             </div>
             
