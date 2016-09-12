@@ -1,26 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import HeadText from './components/headText';
-import BodyText from './components/bodyText';
+import AppView from './components/AppView';
 
-class MainWrapp extends React.Component {
+var pages = [
+    { name: 'welcome', title: 'Welcome', nav: true, auth: false, default: true },
+    { name: 'car', title: 'Car', nav: true, auth: false }
+];
 
-    constructor(props) {
-        super(props);
-    }
-
-    render() {
-        return <article className="row large-6">
-
-            <HeadText {...this.state} />
-
-            <BodyText {...this.props} />
-
-        </article>;
-    }
-}
+var route = 'welcome';
 
 ReactDOM.render(
-    <MainWrapp />,
+    <AppView pages={pages} route={route} />,
     document.getElementById('main')
 );
