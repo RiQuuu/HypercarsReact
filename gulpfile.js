@@ -3,19 +3,13 @@ var sass = require('gulp-sass');
 var browserify = require('browserify');
 var babelify = require('babelify');
 var source = require('vinyl-source-stream');
-var connect = require('connect');
-var serveStatic = require('serve-static');
-
-gulp.task('server', function () {
-    connect().use(serveStatic('./')).listen(8080, function(){
-        console.log('Server running on 8080...');
-    });
-});
+var connect = require('gulp-connect');
+var historyApiFallback = require('connect-history-api-fallback');
 
 gulp.task('sass', function() {
-  return gulp.src('./dev/sass/**/*.scss')
-    .pipe(sass())
-    .pipe(gulp.dest('dist/css'));
+    return gulp.src('./dev/sass/**/*.scss')
+        .pipe(sass())
+        .pipe(gulp.dest('dist/css'));
 })
 
 gulp.task('build', function () {
@@ -27,9 +21,19 @@ gulp.task('build', function () {
         .pipe(gulp.dest('dist'));
 });
 
-gulp.task('watch', ['sass', 'build'], function () {
+gulp.task('server', function() {
+    connect.server({
+        root: '.',
+        livereload: false,
+        middleware: function(connect, opt) {
+            return [ historyApiFallback({}) ];
+        }
+    });
+});
+
+gulp.task('watch', function () {
     gulp.watch('./dev/sass/**/*.scss', ['sass']);
     gulp.watch('./dev/**/*.jsx', ['build']);
 });
 
-gulp.task('default', ['server', 'watch']);
+gulp.task('default', ['sass', 'build', 'server', 'watch']);

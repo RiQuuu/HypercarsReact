@@ -1,15 +1,27 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from 'react-dom';
+import { Router, Route, browserHistory, IndexRoute } from 'react-router';
 import AppView from './components/AppView';
+import Home from './components/Home';
+import Cars from './components/Cars';
+import Car from './components/Car';
 
-var pages = [
-    { name: 'welcome', title: 'Welcome', nav: true, auth: false, default: true },
-    { name: 'car', title: 'Car', nav: true, auth: false }
-];
+render((
+    
+    <Router history={browserHistory}>
 
-var route = 'welcome';
+        <Route path="/" component={AppView}>
 
-ReactDOM.render(
-    <AppView pages={pages} route={route} />,
-    document.getElementById('main')
-);
+            <IndexRoute component={Home}/>
+
+            <Route path="/cars" component={Cars}>
+
+                <Route path="/cars/:title" component={Car}/>
+
+            </Route>
+
+        </Route>
+
+    </Router>
+
+), document.getElementById('main'))

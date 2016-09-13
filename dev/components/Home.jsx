@@ -1,18 +1,18 @@
 import React from 'react';
 
-export default class Welcome extends React.Component {
+export default class Home extends React.Component {
 
     constructor(props) {
         super(props);
     }
-
+    
     render() {
 
-        return <section id="welcome">
+        return <div id="home">
 
             <h2>Welcome</h2>
 
-        </section>;
+        </div>;
 
     };
 
