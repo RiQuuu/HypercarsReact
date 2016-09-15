@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import NavLink from './NavLink';
+import NavLink from './NavLink.jsx';
 
 export default class Cars extends React.Component {
 
@@ -24,18 +24,14 @@ export default class Cars extends React.Component {
     };
 
     render() {
-        
+
         let titleName = '/cars/' + this.state.title;
 
         return <div>
 
-            <h2>Cars</h2>
-
             <ul role="nav">
                 <li><NavLink to={titleName}>{this.state.title}</NavLink></li>
             </ul>
-            
-            {this.props.children}
 
         </div>;
 

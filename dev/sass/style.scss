@@ -1,5 +1,36 @@
-.active {
-  color: green;
+#page {
+    padding-left: 250px;
+
+    nav.navbar {
+        height: 100%;
+        width: 200px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        overflow-x: hidden;
+        padding-top: 40px;
+        background-color: #222;
+        border-color: #080808;
+
+        div.brand a {
+            color: #cbcbcb;
+            text-align: center;
+        }
+
+        ul {
+            margin: 0;
+            padding-left: 30px;
+            list-style-type: none;
+        }
+    }
+}
+
+.idle-button {
+    color: #95cff4;
+}
+
+.active-button {
+    color: #e28a8a;
 }
 
 .head-text {
