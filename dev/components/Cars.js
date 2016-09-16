@@ -22,10 +22,6 @@ var _axios = require('axios');
 
 var _axios2 = _interopRequireDefault(_axios);
 
-var _NavLinkJsx = require('./NavLink.jsx');
-
-var _NavLinkJsx2 = _interopRequireDefault(_NavLinkJsx);
-
 var Cars = (function (_React$Component) {
     _inherits(Cars, _React$Component);
 
@@ -33,48 +29,16 @@ var Cars = (function (_React$Component) {
         _classCallCheck(this, Cars);
 
         _get(Object.getPrototypeOf(Cars.prototype), 'constructor', this).call(this, props, context);
-        this.state = { title: '' };
     }
 
     _createClass(Cars, [{
-        key: 'loadData',
-        value: function loadData() {
-            _axios2['default'].get('http://localhost:8080/cars.json').then((function (response) {
-                this.setState({ title: response.data.cars[0].title });
-            }).bind(this));
-        }
-    }, {
-        key: 'componentDidMount',
-        value: function componentDidMount() {
-            this.loadData();
-        }
-    }, {
-        key: 'shouldComponentUpdate',
-        value: function shouldComponentUpdate(nextProps, nextState) {
-            return true;
-        }
-    }, {
         key: 'render',
         value: function render() {
 
-            var titleName = '/cars/' + this.state.title;
-
             return _react2['default'].createElement(
-                'div',
+                'h3',
                 null,
-                _react2['default'].createElement(
-                    'ul',
-                    { role: 'nav' },
-                    _react2['default'].createElement(
-                        'li',
-                        null,
-                        _react2['default'].createElement(
-                            _NavLinkJsx2['default'],
-                            { to: titleName },
-                            this.state.title
-                        )
-                    )
-                )
+                'Cars'
             );
         }
     }]);
