@@ -22,8 +22,65 @@ var _axios = require('axios');
 
 var _axios2 = _interopRequireDefault(_axios);
 
-var Cars = (function (_React$Component) {
-    _inherits(Cars, _React$Component);
+var _NavLinkJsx = require('./NavLink.jsx');
+
+var _NavLinkJsx2 = _interopRequireDefault(_NavLinkJsx);
+
+var CarDiv = (function (_React$Component) {
+    _inherits(CarDiv, _React$Component);
+
+    function CarDiv(props, context) {
+        _classCallCheck(this, CarDiv);
+
+        _get(Object.getPrototypeOf(CarDiv.prototype), 'constructor', this).call(this, props, context);
+        this.state = {
+            title: '',
+            image: ''
+        };
+    }
+
+    _createClass(CarDiv, [{
+        key: 'loadData',
+        value: function loadData() {
+            _axios2['default'].get('http://localhost:8080/cars.json').then((function (response) {
+                this.setState({
+                    title: response.data.cars[0].title,
+                    image: response.data.cars[0].image
+                });
+            }).bind(this));
+        }
+    }, {
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            this.loadData();
+        }
+    }, {
+        key: 'shouldComponentUpdate',
+        value: function shouldComponentUpdate(nextProps, nextState) {
+            return true;
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+
+            return _react2['default'].createElement(
+                'div',
+                null,
+                _react2['default'].createElement('img', { src: this.state.image }),
+                _react2['default'].createElement(
+                    'p',
+                    null,
+                    this.state.title
+                )
+            );
+        }
+    }]);
+
+    return CarDiv;
+})(_react2['default'].Component);
+
+var Cars = (function (_React$Component2) {
+    _inherits(Cars, _React$Component2);
 
     function Cars(props, context) {
         _classCallCheck(this, Cars);
@@ -36,9 +93,13 @@ var Cars = (function (_React$Component) {
         value: function render() {
 
             return _react2['default'].createElement(
-                'h3',
-                null,
-                'Cars'
+                'div',
+                { id: 'cars' },
+                _react2['default'].createElement(
+                    CarDiv,
+                    null,
+                    _react2['default'].createElement(_NavLinkJsx2['default'], { to: '/cars/Pagani Huayra' })
+                )
             );
         }
     }]);
