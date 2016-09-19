@@ -7,7 +7,7 @@ import Cars from './components/Cars.jsx';
 import Car from './components/Car.jsx';
 
 render((
-    
+
     <Router history={browserHistory}>
 
         <Route path="/" component={AppView}>
@@ -19,7 +19,7 @@ render((
                 <Route path="/cars/:title" component={Car}/>
 
             </Route>
-            
+
         </Route>
 
     </Router>

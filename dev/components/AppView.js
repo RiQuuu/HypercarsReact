@@ -22,6 +22,8 @@ var _axios = require('axios');
 
 var _axios2 = _interopRequireDefault(_axios);
 
+var _reactBootstrap = require('react-bootstrap');
+
 var _reactRouter = require('react-router');
 
 var _NavLinkJsx = require('./NavLink.jsx');
@@ -35,14 +37,20 @@ var AppView = (function (_React$Component) {
         _classCallCheck(this, AppView);
 
         _get(Object.getPrototypeOf(AppView.prototype), 'constructor', this).call(this, props, context);
-        this.state = { title: '' };
+        this.state = {
+            carID: '',
+            title: ''
+        };
     }
 
     _createClass(AppView, [{
         key: 'loadData',
         value: function loadData() {
             _axios2['default'].get('http://localhost:8080/cars.json').then((function (response) {
-                this.setState({ title: response.data.cars[0].title });
+                this.setState({
+                    carID: response.data.cars[0].carID,
+                    title: response.data.cars[0].title
+                });
             }).bind(this));
         }
     }, {
@@ -74,27 +82,27 @@ var AppView = (function (_React$Component) {
             }
 
             return _react2['default'].createElement(
-                'div',
-                { id: 'page' },
+                _reactBootstrap.Grid,
+                { id: 'page', fluid: true },
                 _react2['default'].createElement(
-                    'nav',
-                    { className: 'navbar' },
+                    _reactBootstrap.Navbar,
+                    { className: 'navbar', fixedTop: true, inverse: true, fluid: true },
                     _react2['default'].createElement(
-                        'div',
-                        { className: 'brand' },
+                        _reactBootstrap.Navbar.Header,
+                        null,
                         _react2['default'].createElement(
-                            _reactRouter.Link,
-                            { to: '/' },
+                            _reactBootstrap.Navbar.Brand,
+                            null,
                             _react2['default'].createElement(
-                                'h1',
-                                null,
+                                _reactRouter.Link,
+                                { to: '/' },
                                 'ReactTest'
                             )
                         )
                     ),
                     _react2['default'].createElement(
                         'ul',
-                        { role: 'nav' },
+                        { className: 'nav-links' },
                         _react2['default'].createElement(
                             'li',
                             null,
@@ -115,20 +123,24 @@ var AppView = (function (_React$Component) {
                         ),
                         _react2['default'].createElement(
                             'ul',
-                            { role: 'nav' },
+                            null,
                             _react2['default'].createElement(
                                 'li',
                                 null,
                                 _react2['default'].createElement(
                                     _NavLinkJsx2['default'],
-                                    { to: titleName },
+                                    { key: this.state.carID, to: titleName },
                                     this.state.title
                                 )
                             )
                         )
                     )
                 ),
-                position
+                _react2['default'].createElement(
+                    _reactBootstrap.Grid,
+                    { className: 'content' },
+                    position
+                )
             );
         }
     }]);

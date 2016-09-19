@@ -1,46 +1,74 @@
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
 #page {
-    padding-left: 250px;
+    padding-left: 200px;
+}
 
-    nav.navbar {
-        height: 100%;
-        width: 200px;
-        position: fixed;
-        top: 0;
-        left: 0;
-        overflow-x: hidden;
-        padding-top: 40px;
-        background-color: #222;
-        border-color: #080808;
+#cars {
 
-        div.brand a {
-            color: #cbcbcb;
-            text-align: center;
+    .carthumb-holder{
+        background-color: #4e4e4e;
+
+        h3 {
+            color: #e28a8a;
+            padding: 10px;
+
+            &:hover, &:focus {
+                color: #b97272; 
+                text-decoration: none;
+            }
         }
+    }
+}
 
-        ul {
-            margin: 0;
-            padding-left: 30px;
-            list-style-type: none;
+.content {
+    padding-top: 45px;
+}
+
+.navbar {
+    width: 200px;
+    height: 100%;
+    padding-top: 40px;
+
+    .navbar-brand {
+        font-size: 38px;
+    }
+
+    .nav-links {
+        margin-top: 80px;
+        padding: 0;
+
+        li {
+            list-style: none;
         }
     }
 }
 
 .idle-button {
     color: #95cff4;
+
+    &:hover, &:focus {
+        color: #7ca8c4; 
+        text-decoration: none;
+    }
 }
 
 .active-button {
     color: #e28a8a;
+
+    &:hover, &:focus {
+        color: #b97272; 
+        text-decoration: none;
+    }
 }
 
-.head-text {
-    margin-top: 50px;
-
-    .lead {
-        margin-top: 20px;
-        font-size: 115%;
-        line-height: 1.5;
-    }
+.head-text .lead {
+    margin-top: 20px;
+    font-size: 115%;
+    line-height: 1.5;
 }
 
 .body-text {

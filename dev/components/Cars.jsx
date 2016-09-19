@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import { Grid, Row, Col, Image } from 'react-bootstrap';
 import NavLink from './NavLink.jsx';
 
 class CarDiv extends React.Component {
@@ -31,11 +32,11 @@ class CarDiv extends React.Component {
 
     render() {
 
-        return <div>
+        return <div className="carthumb-holder">
 
-            <img src={this.state.image} />
+            <Image src={this.state.image} responsive />
 
-            <p>{this.state.title}</p>
+            <h3>{this.state.title}</h3>
 
         </div>;
 
@@ -51,15 +52,15 @@ export default class Cars extends React.Component {
 
     render() {
 
-        return <div id="cars">
+        return <Row id="cars">
 
-            <CarDiv>
+            <Col xs={6} md={4}>
 
-                <NavLink to='/cars/Pagani Huayra'></NavLink>
+                <NavLink to='/cars/Pagani Huayra'><CarDiv/></NavLink>
 
-            </CarDiv>
+            </Col>
 
-        </div>;
+        </Row>;
 
     };
 

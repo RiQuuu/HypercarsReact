@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import { Grid, Row, Col, Navbar, Nav } from 'react-bootstrap';
 import { Link } from 'react-router';
 import NavLink from './NavLink.jsx';
 
@@ -7,12 +8,18 @@ export default class AppView extends React.Component {
 
     constructor(props, context) {
         super(props, context);
-        this.state = { title: '' };
+        this.state = { 
+            carID: '',
+            title: '' 
+        };
     }
 
     loadData() { 
         axios.get('http://localhost:8080/cars.json').then(function(response){
-            this.setState({ title: response.data.cars[0].title }); 
+            this.setState({ 
+                carID: response.data.cars[0].carID,
+                title: response.data.cars[0].title 
+            }); 
         }.bind(this));  
     }
 
@@ -23,7 +30,6 @@ export default class AppView extends React.Component {
     shouldComponentUpdate(nextProps, nextState) {
         return true;
     };
-
 
     render() {
 
@@ -43,24 +49,30 @@ export default class AppView extends React.Component {
 
         }
 
-        return <div id="page">
+        return <Grid id="page" fluid >
 
-            <nav className="navbar">
-                <div className="brand">
-                    <Link to="/"><h1>ReactTest</h1></Link>
-                </div>              
-                <ul role="nav">
-                    <li><NavLink to="/" onlyActiveOnIndex={true}>Home</NavLink></li>
+            <Navbar className="navbar" fixedTop inverse fluid >
+                <Navbar.Header>
+                    <Navbar.Brand>
+                        <Link to="/">ReactTest</Link>
+                    </Navbar.Brand>
+                </Navbar.Header> 
+                <ul className="nav-links">
+                    <li><NavLink to= "/" onlyActiveOnIndex={true}>Home</NavLink></li>
                     <li><NavLink to="/cars">Cars</NavLink></li>
-                    <ul role="nav">
-                        <li><NavLink to={titleName}>{this.state.title}</NavLink></li>
+                    <ul>
+                        <li><NavLink key={this.state.carID} to={titleName}>{this.state.title}</NavLink></li>
                     </ul>
                 </ul>
-            </nav>
+            </Navbar>
 
-            {position}
+            <Grid className="content">
 
-        </div>;
+                {position}
+
+            </Grid>
+
+        </Grid>;
 
     }
 

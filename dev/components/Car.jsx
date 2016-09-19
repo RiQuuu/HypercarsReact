@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import { Grid, Row, Col, Image } from 'react-bootstrap';
 
 export default class Car extends React.Component {
 
@@ -34,8 +35,8 @@ export default class Car extends React.Component {
         return <div id="car" className="column head-text">
 
             <h2><strong>{this.props.params.title}</strong></h2>
-
-            <img src={this.state.image} />
+            
+            <Image src={this.state.image} responsive />
 
             <p className="lead">{this.state.desc}</p>
 

@@ -24,30 +24,28 @@ var _axios2 = _interopRequireDefault(_axios);
 
 var _reactBootstrap = require('react-bootstrap');
 
-var _NavLinkJsx = require('./NavLink.jsx');
+var Car = (function (_React$Component) {
+    _inherits(Car, _React$Component);
 
-var _NavLinkJsx2 = _interopRequireDefault(_NavLinkJsx);
+    function Car(props, context) {
+        _classCallCheck(this, Car);
 
-var CarDiv = (function (_React$Component) {
-    _inherits(CarDiv, _React$Component);
-
-    function CarDiv(props, context) {
-        _classCallCheck(this, CarDiv);
-
-        _get(Object.getPrototypeOf(CarDiv.prototype), 'constructor', this).call(this, props, context);
+        _get(Object.getPrototypeOf(Car.prototype), 'constructor', this).call(this, props, context);
         this.state = {
-            title: '',
-            image: ''
+            image: '',
+            desc: '',
+            text: ''
         };
     }
 
-    _createClass(CarDiv, [{
+    _createClass(Car, [{
         key: 'loadData',
         value: function loadData() {
             _axios2['default'].get('http://localhost:8080/cars.json').then((function (response) {
                 this.setState({
-                    title: response.data.cars[0].title,
-                    image: response.data.cars[0].image
+                    image: response.data.cars[0].image,
+                    desc: response.data.cars[0].desc,
+                    text: response.data.cars[0].text
                 });
             }).bind(this));
         }
@@ -64,54 +62,35 @@ var CarDiv = (function (_React$Component) {
     }, {
         key: 'render',
         value: function render() {
-
             return _react2['default'].createElement(
                 'div',
-                { className: 'carthumb-holder' },
+                { id: 'car', className: 'column head-text' },
+                _react2['default'].createElement(
+                    'h2',
+                    null,
+                    _react2['default'].createElement(
+                        'strong',
+                        null,
+                        this.props.params.title
+                    )
+                ),
                 _react2['default'].createElement(_reactBootstrap.Image, { src: this.state.image, responsive: true }),
                 _react2['default'].createElement(
-                    'h3',
-                    null,
-                    this.state.title
-                )
-            );
-        }
-    }]);
-
-    return CarDiv;
-})(_react2['default'].Component);
-
-var Cars = (function (_React$Component2) {
-    _inherits(Cars, _React$Component2);
-
-    function Cars(props, context) {
-        _classCallCheck(this, Cars);
-
-        _get(Object.getPrototypeOf(Cars.prototype), 'constructor', this).call(this, props, context);
-    }
-
-    _createClass(Cars, [{
-        key: 'render',
-        value: function render() {
-
-            return _react2['default'].createElement(
-                _reactBootstrap.Row,
-                { id: 'cars' },
+                    'p',
+                    { className: 'lead' },
+                    this.state.desc
+                ),
                 _react2['default'].createElement(
-                    _reactBootstrap.Col,
-                    { xs: 6, md: 4 },
-                    _react2['default'].createElement(
-                        _NavLinkJsx2['default'],
-                        { to: '/cars/Pagani Huayra' },
-                        _react2['default'].createElement(CarDiv, null)
-                    )
+                    'p',
+                    { className: 'body-text' },
+                    this.state.text
                 )
             );
         }
     }]);
 
-    return Cars;
+    return Car;
 })(_react2['default'].Component);
 
-exports['default'] = Cars;
+exports['default'] = Car;
 module.exports = exports['default'];
