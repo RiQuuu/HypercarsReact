@@ -37,26 +37,36 @@ var AppView = (function (_React$Component) {
         _classCallCheck(this, AppView);
 
         _get(Object.getPrototypeOf(AppView.prototype), 'constructor', this).call(this, props, context);
+
         this.state = {
-            carID: '',
-            title: ''
+            cars: [],
+            showResults: false
         };
+
+        this.showCars = this.showCars.bind(this);
     }
 
     _createClass(AppView, [{
-        key: 'loadData',
-        value: function loadData() {
-            _axios2['default'].get('http://localhost:8080/cars.json').then((function (response) {
-                this.setState({
-                    carID: response.data.cars[0].carID,
-                    title: response.data.cars[0].title
-                });
-            }).bind(this));
+        key: 'showCars',
+        value: function showCars() {
+
+            this.setState({ showResults: !this.state.showResults });
         }
     }, {
         key: 'componentDidMount',
         value: function componentDidMount() {
-            this.loadData();
+
+            var th = this;
+
+            this.serverRequest = _axios2['default'].get('http://localhost:8080/cars.json').then((function (result) {
+
+                th.setState({ cars: result.data.cars });
+            }).bind(this));
+        }
+    }, {
+        key: 'componentWillUnmount',
+        value: function componentWillUnmount() {
+            this.serverRequest.abort();
         }
     }, {
         key: 'shouldComponentUpdate',
@@ -66,8 +76,6 @@ var AppView = (function (_React$Component) {
     }, {
         key: 'render',
         value: function render() {
-
-            var titleName = '/cars/' + this.state.title;
 
             var currentLocation = this.props.location.pathname;
 
@@ -117,23 +125,28 @@ var AppView = (function (_React$Component) {
                             null,
                             _react2['default'].createElement(
                                 _NavLinkJsx2['default'],
-                                { to: '/cars' },
+                                { to: '/cars', onClick: this.showCars },
                                 'Cars'
                             )
                         ),
-                        _react2['default'].createElement(
+                        this.state.showResults ? _react2['default'].createElement(
                             'ul',
                             null,
-                            _react2['default'].createElement(
-                                'li',
-                                null,
-                                _react2['default'].createElement(
-                                    _NavLinkJsx2['default'],
-                                    { key: this.state.carID, to: titleName },
-                                    this.state.title
-                                )
-                            )
-                        )
+                            this.state.cars.map(function (car, i) {
+
+                                var titleName = '/cars/' + car.title;
+
+                                return _react2['default'].createElement(
+                                    'li',
+                                    { key: i },
+                                    _react2['default'].createElement(
+                                        _NavLinkJsx2['default'],
+                                        { key: i, to: titleName },
+                                        car.title
+                                    )
+                                );
+                            })
+                        ) : null
                     )
                 ),
                 _react2['default'].createElement(

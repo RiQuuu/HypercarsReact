@@ -3,27 +3,27 @@ import axios from 'axios';
 import { Grid, Row, Col, Image } from 'react-bootstrap';
 import NavLink from './NavLink.jsx';
 
-class CarDiv extends React.Component {
+export default class Cars extends React.Component {
 
     constructor(props, context) {
         super(props, context);
         this.state = {
-            title: '',
-            image: ''
+            cars: []
         };
     }
 
-    loadData() { 
-        axios.get('http://localhost:8080/cars.json').then(function(response){
-            this.setState({
-                title: response.data.cars[0].title,
-                image: response.data.cars[0].image
-            }); 
-        }.bind(this));  
-    }
-
     componentDidMount() {
-        this.loadData();  
+        var th = this;
+
+        this.serverRequest = axios.get('http://localhost:8080/cars.json').then(function(result) {    
+            th.setState({
+                cars: result.data.cars
+            });
+        }.bind(this));
+    };
+
+    componentWillUnmount() {
+        this.serverRequest.abort;
     };
 
     shouldComponentUpdate(nextProps, nextState) {
@@ -32,33 +32,32 @@ class CarDiv extends React.Component {
 
     render() {
 
-        return <div className="carthumb-holder">
-
-            <Image src={this.state.image} responsive />
-
-            <h3>{this.state.title}</h3>
-
-        </div>;
-
-    };
-
-}
-
-export default class Cars extends React.Component {
-
-    constructor(props, context) {
-        super(props, context);
-    }
-
-    render() {
-
         return <Row id="cars">
 
-            <Col xs={6} md={4}>
+            {this.state.cars.map(function(car, i) {
 
-                <NavLink to='/cars/Pagani Huayra'><CarDiv/></NavLink>
+                let titleName = '/cars/' + car.title;
 
-            </Col>
+                return (        
+
+                    <Col xs={6} md={4} key={i}>
+
+                        <NavLink key={i} to={titleName}>
+
+                            <div className="carthumb-holder" key={i}>
+
+                                <Image src={car.image} responsive />
+
+                                <h3>{car.title}</h3>
+
+                            </div>
+
+                        </NavLink>
+
+                    </Col>
+
+                );
+            })}
 
         </Row>;
 

@@ -7,24 +7,38 @@ import NavLink from './NavLink.jsx';
 export default class AppView extends React.Component {
 
     constructor(props, context) {
+
         super(props, context);
+
         this.state = { 
-            carID: '',
-            title: '' 
+            cars: [], 
+            showResults: false 
         };
+
+        this.showCars = this.showCars.bind(this);
+
     }
 
-    loadData() { 
-        axios.get('http://localhost:8080/cars.json').then(function(response){
-            this.setState({ 
-                carID: response.data.cars[0].carID,
-                title: response.data.cars[0].title 
-            }); 
-        }.bind(this));  
+    showCars() {
+
+        this.setState({ showResults: !this.state.showResults });
+
     }
 
     componentDidMount() {
-        this.loadData();
+
+        var th = this;
+
+        this.serverRequest = axios.get('http://localhost:8080/cars.json').then(function(result) { 
+
+            th.setState({ cars: result.data.cars });
+
+        }.bind(this));
+
+    };
+
+    componentWillUnmount() {
+        this.serverRequest.abort();
     };
 
     shouldComponentUpdate(nextProps, nextState) {
@@ -32,8 +46,6 @@ export default class AppView extends React.Component {
     };
 
     render() {
-
-        let titleName = '/cars/' + this.state.title;
 
         let currentLocation = this.props.location.pathname;
 
@@ -52,18 +64,43 @@ export default class AppView extends React.Component {
         return <Grid id="page" fluid >
 
             <Navbar className="navbar" fixedTop inverse fluid >
+
                 <Navbar.Header>
+
                     <Navbar.Brand>
+
                         <Link to="/">ReactTest</Link>
+
                     </Navbar.Brand>
+
                 </Navbar.Header> 
+
                 <ul className="nav-links">
+
                     <li><NavLink to= "/" onlyActiveOnIndex={true}>Home</NavLink></li>
-                    <li><NavLink to="/cars">Cars</NavLink></li>
-                    <ul>
-                        <li><NavLink key={this.state.carID} to={titleName}>{this.state.title}</NavLink></li>
-                    </ul>
+
+                    <li><NavLink to="/cars" onClick={this.showCars}>Cars</NavLink></li>
+
+                    { this.state.showResults ? <ul>
+
+                        {this.state.cars.map(function(car, i) {
+
+                            let titleName = '/cars/' + car.title;
+
+                            return (
+
+                                <li key={i}>
+                                    <NavLink key={i} to={titleName}>{car.title}</NavLink>
+                                </li>
+
+                            );
+
+                        })}
+
+                    </ul> : null }
+
                 </ul>
+
             </Navbar>
 
             <Grid className="content">

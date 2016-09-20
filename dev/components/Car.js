@@ -31,28 +31,37 @@ var Car = (function (_React$Component) {
         _classCallCheck(this, Car);
 
         _get(Object.getPrototypeOf(Car.prototype), 'constructor', this).call(this, props, context);
-        this.state = {
-            image: '',
-            desc: '',
-            text: ''
-        };
+        this.state = { car: [] };
     }
 
     _createClass(Car, [{
-        key: 'loadData',
-        value: function loadData() {
-            _axios2['default'].get('http://localhost:8080/cars.json').then((function (response) {
-                this.setState({
-                    image: response.data.cars[0].image,
-                    desc: response.data.cars[0].desc,
-                    text: response.data.cars[0].text
-                });
+        key: 'loadContent',
+        value: function loadContent() {
+
+            _axios2['default'].get('http://localhost:8080/cars.json').then((function (result) {
+
+                for (var i = 0; i < result.data.cars.length; i++) {
+
+                    if (result.data.cars[i].title == this.props.params.title) {
+
+                        this.setState({ car: result.data.cars[i] });
+
+                        break;
+                    }
+                }
             }).bind(this));
         }
     }, {
         key: 'componentDidMount',
         value: function componentDidMount() {
-            this.loadData();
+
+            this.loadContent();
+        }
+    }, {
+        key: 'componentWillReceiveProps',
+        value: function componentWillReceiveProps() {
+
+            this.loadContent();
         }
     }, {
         key: 'shouldComponentUpdate',
@@ -62,6 +71,7 @@ var Car = (function (_React$Component) {
     }, {
         key: 'render',
         value: function render() {
+
             return _react2['default'].createElement(
                 'div',
                 { id: 'car', className: 'column head-text' },
@@ -74,16 +84,16 @@ var Car = (function (_React$Component) {
                         this.props.params.title
                     )
                 ),
-                _react2['default'].createElement(_reactBootstrap.Image, { src: this.state.image, responsive: true }),
+                _react2['default'].createElement(_reactBootstrap.Image, { src: this.state.car.image, responsive: true }),
                 _react2['default'].createElement(
                     'p',
                     { className: 'lead' },
-                    this.state.desc
+                    this.state.car.desc
                 ),
                 _react2['default'].createElement(
                     'p',
                     { className: 'body-text' },
-                    this.state.text
+                    this.state.car.text
                 )
             );
         }

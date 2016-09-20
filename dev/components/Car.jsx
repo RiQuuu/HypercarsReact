@@ -5,26 +5,42 @@ import { Grid, Row, Col, Image } from 'react-bootstrap';
 export default class Car extends React.Component {
 
     constructor(props, context) {
+
         super(props, context);
-        this.state = {
-            image: '',
-            desc: '',
-            text: ''
-        };
+        this.state = { car: [] };
+
     }
 
-    loadData() { 
-        axios.get('http://localhost:8080/cars.json').then(function(response){
-            this.setState({
-                image: response.data.cars[0].image,
-                desc: response.data.cars[0].desc,
-                text: response.data.cars[0].text
-            }); 
-        }.bind(this));  
+    loadContent() {
+
+        axios.get('http://localhost:8080/cars.json').then(function(result) {
+
+            for( var i = 0; i < result.data.cars.length; i++ ) {
+
+                if( result.data.cars[i].title == this.props.params.title ) {
+
+                    this.setState({ car: result.data.cars[i] });
+
+                    break;
+
+                }
+
+            }
+
+        }.bind(this));
+
     }
 
     componentDidMount() {
-        this.loadData();  
+
+        this.loadContent();
+
+    };
+
+    componentWillReceiveProps() {
+
+        this.loadContent();
+
     };
 
     shouldComponentUpdate(nextProps, nextState) {
@@ -32,15 +48,16 @@ export default class Car extends React.Component {
     };
 
     render() {
+
         return <div id="car" className="column head-text">
 
             <h2><strong>{this.props.params.title}</strong></h2>
-            
-            <Image src={this.state.image} responsive />
 
-            <p className="lead">{this.state.desc}</p>
+            <Image src={this.state.car.image} responsive />
 
-            <p className="body-text">{this.state.text}</p>
+            <p className="lead">{this.state.car.desc}</p>
+
+            <p className="body-text">{this.state.car.text}</p>
 
         </div>;
 

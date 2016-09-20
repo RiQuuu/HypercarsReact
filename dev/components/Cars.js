@@ -28,33 +28,33 @@ var _NavLinkJsx = require('./NavLink.jsx');
 
 var _NavLinkJsx2 = _interopRequireDefault(_NavLinkJsx);
 
-var CarDiv = (function (_React$Component) {
-    _inherits(CarDiv, _React$Component);
+var Cars = (function (_React$Component) {
+    _inherits(Cars, _React$Component);
 
-    function CarDiv(props, context) {
-        _classCallCheck(this, CarDiv);
+    function Cars(props, context) {
+        _classCallCheck(this, Cars);
 
-        _get(Object.getPrototypeOf(CarDiv.prototype), 'constructor', this).call(this, props, context);
+        _get(Object.getPrototypeOf(Cars.prototype), 'constructor', this).call(this, props, context);
         this.state = {
-            title: '',
-            image: ''
+            cars: []
         };
     }
 
-    _createClass(CarDiv, [{
-        key: 'loadData',
-        value: function loadData() {
-            _axios2['default'].get('http://localhost:8080/cars.json').then((function (response) {
-                this.setState({
-                    title: response.data.cars[0].title,
-                    image: response.data.cars[0].image
+    _createClass(Cars, [{
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            var th = this;
+
+            this.serverRequest = _axios2['default'].get('http://localhost:8080/cars.json').then((function (result) {
+                th.setState({
+                    cars: result.data.cars
                 });
             }).bind(this));
         }
     }, {
-        key: 'componentDidMount',
-        value: function componentDidMount() {
-            this.loadData();
+        key: 'componentWillUnmount',
+        value: function componentWillUnmount() {
+            this.serverRequest.abort;
         }
     }, {
         key: 'shouldComponentUpdate',
@@ -66,46 +66,31 @@ var CarDiv = (function (_React$Component) {
         value: function render() {
 
             return _react2['default'].createElement(
-                'div',
-                { className: 'carthumb-holder' },
-                _react2['default'].createElement(_reactBootstrap.Image, { src: this.state.image, responsive: true }),
-                _react2['default'].createElement(
-                    'h3',
-                    null,
-                    this.state.title
-                )
-            );
-        }
-    }]);
-
-    return CarDiv;
-})(_react2['default'].Component);
-
-var Cars = (function (_React$Component2) {
-    _inherits(Cars, _React$Component2);
-
-    function Cars(props, context) {
-        _classCallCheck(this, Cars);
-
-        _get(Object.getPrototypeOf(Cars.prototype), 'constructor', this).call(this, props, context);
-    }
-
-    _createClass(Cars, [{
-        key: 'render',
-        value: function render() {
-
-            return _react2['default'].createElement(
                 _reactBootstrap.Row,
                 { id: 'cars' },
-                _react2['default'].createElement(
-                    _reactBootstrap.Col,
-                    { xs: 6, md: 4 },
-                    _react2['default'].createElement(
-                        _NavLinkJsx2['default'],
-                        { to: '/cars/Pagani Huayra' },
-                        _react2['default'].createElement(CarDiv, null)
-                    )
-                )
+                this.state.cars.map(function (car, i) {
+
+                    var titleName = '/cars/' + car.title;
+
+                    return _react2['default'].createElement(
+                        _reactBootstrap.Col,
+                        { xs: 6, md: 4, key: i },
+                        _react2['default'].createElement(
+                            _NavLinkJsx2['default'],
+                            { key: i, to: titleName },
+                            _react2['default'].createElement(
+                                'div',
+                                { className: 'carthumb-holder', key: i },
+                                _react2['default'].createElement(_reactBootstrap.Image, { src: car.image, responsive: true }),
+                                _react2['default'].createElement(
+                                    'h3',
+                                    null,
+                                    car.title
+                                )
+                            )
+                        )
+                    );
+                })
             );
         }
     }]);
