@@ -2,33 +2,143 @@
     "cars": [
         {
             "title": "Pagani Huayra",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/1/17/Pagani_Huayra.jpg",
+            "image": "http://localhost:8080/images/Pagani_Huayra.jpg",
             "desc": "The Pagani Huayra is an Italian mid-engined sports car produced by Pagani. Succeeding the company's previous offering, the Zonda, it costs €1,198,000 ($1,314,000), (£910,905).",
-            "text": "The Huayra uses a twin-turbo, V12 engine developed by Mercedes-AMG specially for the Huayra. The Huayra's 6.0-litre engine, the M158, produces 730 metric horsepower (720 bhp (539 kW)) and 811 lb·ft (1,100 N·m) of torque. Its top speed is about 238 mph (383 km/h) and it has a rating 0–62 miles per hour (0–100 km/h) acceleration time of 2.8 seconds. Using Pirelli tires, the Pagani Huayra is capable of withstanding 1.66 g of lateral acceleration at speeds of up to 230 mph (370 km/h). The Pagani Huayra uses a seven-speed sequential gearbox and a single disc clutch. The choice not to use a dual-clutch in an oil bath was due to the increase in weight of over 70 kg (154 lb), thus negating any advantage of the faster gear changes in a double-clutch transmission. As a result, the entire transmission weighs 96 kg (212 lb). The car is equipped with Brembo brake calipers, rotors and pads. The calipers have four pistons in front and four in the rear. The rotors are drilled carbon ceramic, 380 mm (15.0 in) in diameter and 34 mm (1.3 in) thick."
-        },
-        {
-            "title": "McLaren P1",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/c/c8/McLaren_P1.jpg",
-            "desc": "The McLaren P1 is a limited production plug-in hybrid sports car manufactured by British car manufacturer McLaren Automotive.",
-            "text": "The concept car was capable of reaching speeds of 219 mph (352 km/h) with the limiter on. Debuted at the 2012 Paris Motor Show all 375 models were soon snatched up. Deliveries to retail customers began in the UK in October 2013. The entire P1 production of 375 units was sold out by November 2013. The production run ended in December 2015. The United States accounted for 34% of the limited production run, and Europe for 26%. It is considered to be the successor to the F1, utilizing hybrid power and Formula 1 technology, but does not have the same three seat layout as its predecessor. Like the F1 road car of 1992, the P1 is a mid-engine, rear wheel drive design that uses a carbon fibre monocoque and roof structure safety cage concept called MonoCage, which is a development of the MonoCell first used in the MP4-12C and then in subsequent evolutionary models. Its main competitors are the LaFerrari and the Porsche 918. They are all similar in specifications and performance, and in a race round Silverstone circuit they were all within a second of each other, the P1 finishing first at a time of 58.24 sec and the LaFerrari finishing slightly slower at 58.58 sec and the Porsche in between them with 58.46 sec. A track version of the P1, the P1 GTR, was unveiled at the 2015 Geneva Motor Show. Production of the GTR was limited to approximately 35 units and only original P1 owners will be invited to buy one."
+            "text": "The Huayra uses a twin-turbo, V12 engine developed by Mercedes-AMG specially for the Huayra. The Huayra's 6.0-litre engine, the M158, produces 730 metric horsepower (720 bhp (539 kW)) and 811 lb·ft (1,100 N·m) of torque. Its top speed is about 238 mph (383 km/h) and it has a rating 0–62 miles per hour (0–100 km/h) acceleration time of 2.8 seconds. Using Pirelli tires, the Pagani Huayra is capable of withstanding 1.66 g of lateral acceleration at speeds of up to 230 mph (370 km/h). The Pagani Huayra uses a seven-speed sequential gearbox and a single disc clutch. The choice not to use a dual-clutch in an oil bath was due to the increase in weight of over 70 kg (154 lb), thus negating any advantage of the faster gear changes in a double-clutch transmission. As a result, the entire transmission weighs 96 kg (212 lb). The car is equipped with Brembo brake calipers, rotors and pads. The calipers have four pistons in front and four in the rear. The rotors are drilled carbon ceramic, 380 mm (15.0 in) in diameter and 34 mm (1.3 in) thick.",
+            "specs": {
+                "manufacturer": "Pagani Automobili S.p.A.",
+                "production": "2012 – present",
+                "assembly": "Modena, Italy",
+                "designer": "Horacio Pagani",
+                "class": "Sports car",
+                "body-style": "2-door coupe, 2-door roadster",
+                "layout": "Rear mid-engine, rear-wheel-drive",
+                "engine": "5980 cc Mercedes-AMG bi-turbo M158 V12",
+                "consumption": "21.4 l/100 km (11 mpg) in city, 13.8 l/100 km (17 mpg) in highway, 18.1 l/100 km (13 mpg) combined",
+                "transmission": "7-speed sequential",
+                "horsepower": "720 bhp (539 kW)",
+                "torque": "1,100 N·m (811 lb·ft)",
+                "speed": "383 km/h (238 mph)",
+                "acceleration": "2.8 seconds",
+                "wheelbase": "2,795 mm (110.0 in)",
+                "length": "4,605 mm (181.3 in)",
+                "width": "2,036 mm (80.2 in)",
+                "height": "1,169 mm (46.0 in)",
+                "curb-weight": "1,350 kg (2,980 lb) (dry), 1,697 kg (3,741 lb) (wet)",
+                "price": "€1,198,000 ($1,314,000), (£910,905)"
+            }
         },
         {
             "title": "Ferrari LaFerrari",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/e/e5/LaFerrari_in_Beverly_Hills_%2814563979888%29.jpg",
+            "image": "http://localhost:8080/images/Ferrari_LaFerrari.jpg",
             "desc": "LaFerrari (project name, F150) is a limited production hybrid sports car built by Italian sports car maker Ferrari.",
-            "text": "The car and its name were officially unveiled at the 2013 Geneva Auto Show. It is based on findings from testing of the Ferrari FXX and on research being conducted by the Millechili Project at the University of Modena. Association with the Millechili Project led to speculation during development that the car would weigh under 1,000 kg (2,205 lb), but a dry weight of around 1,255 kg (2,767 lb) was claimed. Only 499 units have been built, and each cost more than 1 million US dollars. On August 31st, 2016, Ferrari announced that a 500th LaFerrari will be built and sold to benefit the people of central Italy affected by the earthquake of the 24th of August."
+            "text": "The car and its name were officially unveiled at the 2013 Geneva Auto Show. It is based on findings from testing of the Ferrari FXX and on research being conducted by the Millechili Project at the University of Modena. Association with the Millechili Project led to speculation during development that the car would weigh under 1,000 kg (2,205 lb), but a dry weight of around 1,255 kg (2,767 lb) was claimed. Only 499 units have been built, and each cost more than 1 million US dollars. On August 31st, 2016, Ferrari announced that a 500th LaFerrari will be built and sold to benefit the people of central Italy affected by the earthquake of the 24th of August.",
+            "specs": {
+                "manufacturer": "Ferrari",
+                "production": "2013 – 2015 (Berlinetta), 2016 – present (Spider)",
+                "assembly": "Maranello, Italy",
+                "designer": "Centro Stile Ferrari under Flavio Manzoni",
+                "class": "Sports car",
+                "body-style": "2-door berlinetta, 2-door spider",
+                "layout": "Rear mid-engine, rear-wheel-drive",
+                "engine": "6.3 L F140FE V12, electric motor & KERS",
+                "consumption": "19.6 l/100 km (12 mpg) city, 14.7 l/100 km (16 mpg) highway, 16.7 l/100 km (14 mpg) combined",
+                "transmission": "7-speed dual-clutch automated manual",
+                "horsepower": "950 bhp (708 kW)",
+                "torque": "900 N·m (664 lb·ft)",
+                "speed": "350 km/h (220 mph)",
+                "acceleration": "less than 3 seconds",
+                "wheelbase": "2,650 mm (110.0 in)",
+                "length": "4,702 mm (185.1 in)",
+                "width": "1,992 mm (78.4 in)",
+                "height": "1,116 mm (43.9 in)",
+                "curb-weight": "1,585 kg (3,495 lb)",
+                "price": "€1,274,000 ($1,420,000), (£1,092,000)"
+            }
+        },
+        {
+            "title": "McLaren P1",
+            "image": "http://localhost:8080/images/McLaren_P1.jpg",
+            "desc": "The McLaren P1 is a limited production plug-in hybrid sports car manufactured by British car manufacturer McLaren Automotive.",
+            "text": "The concept car was capable of reaching speeds of 219 mph (352 km/h) with the limiter on. Debuted at the 2012 Paris Motor Show all 375 models were soon snatched up. Deliveries to retail customers began in the UK in October 2013. The entire P1 production of 375 units was sold out by November 2013. The production run ended in December 2015. The United States accounted for 34% of the limited production run, and Europe for 26%. It is considered to be the successor to the F1, utilizing hybrid power and Formula 1 technology, but does not have the same three seat layout as its predecessor. Like the F1 road car of 1992, the P1 is a mid-engine, rear wheel drive design that uses a carbon fibre monocoque and roof structure safety cage concept called MonoCage, which is a development of the MonoCell first used in the MP4-12C and then in subsequent evolutionary models. Its main competitors are the LaFerrari and the Porsche 918. They are all similar in specifications and performance, and in a race round Silverstone circuit they were all within a second of each other, the P1 finishing first at a time of 58.24 sec and the LaFerrari finishing slightly slower at 58.58 sec and the Porsche in between them with 58.46 sec. A track version of the P1, the P1 GTR, was unveiled at the 2015 Geneva Motor Show. Production of the GTR was limited to approximately 35 units and only original P1 owners will be invited to buy one.",
+            "specs": {
+                "manufacturer": "McLaren Automotive",
+                "production": "October 2013 – December 2015",
+                "assembly": "Woking, Surrey, England",
+                "designer": "Frank Stephenson",
+                "class": "Sports car",
+                "body-style": "2-door coupé",
+                "layout": "Mid-engine, rear-wheel-drive",
+                "engine": "3.8 L twin-turbo M838TQ V8 & McLaren electric ECU motor",
+                "consumption": "14.7 l/100 km (16 mpg) city, 11.8 l/100 km (20 mpg) highway, 13.8 l/100 km (17 mpg) combined",
+                "transmission": "7-speed dual-clutch",
+                "horsepower": "904 bhp (674 kW)",
+                "torque": "980 N·m (723 lb·ft)",
+                "speed": "351 km/h (218 mph)",
+                "acceleration": "2.8 seconds",
+                "wheelbase": "2,680 mm (106 in)",
+                "length": "4,588 mm (181 in)",
+                "width": "1,946 mm (77 in)",
+                "height": "1,188 mm (47 in)",
+                "curb-weight": "1,547 kg (3,411 lb)",
+                "price": "€1,030,000 ($1,350,000), (£866,000)"
+            }
         },
         {
             "title": "Porsche 918",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/5/59/Porsche_918_Spyder_.jpg",
+            "image": "http://localhost:8080/images/Porsche_918.jpg",
             "desc": "The Porsche 918 Spyder is a mid-engined plug-in hybrid sports car by Porsche.",
-            "text": "The Spyder is powered by a naturally-aspirated 4.6 litre V8 engine, developing 608 metric horsepower (447 kW), with two electric motors delivering an additional 279 metric horsepower (205 kW) for a combined output of 887 metric horsepower (652 kW). The 918 Spyder's 6.8 kWh lithium-ion battery pack delivers an all-electric range of 19 km (12 mi) under EPA's five-cycle tests. The car has a top speed of around 340 km/h (210 mph)."
+            "text": "The Spyder is powered by a naturally-aspirated 4.6 litre V8 engine, developing 608 metric horsepower (447 kW), with two electric motors delivering an additional 279 metric horsepower (205 kW) for a combined output of 887 metric horsepower (652 kW). The 918 Spyder's 6.8 kWh lithium-ion battery pack delivers an all-electric range of 19 km (12 mi) under EPA's five-cycle tests. The car has a top speed of around 340 km/h (210 mph).",
+            "specs": {
+                "manufacturer": "Porsche",
+                "production": "2013 – 2015",
+                "assembly": "Stuttgart, Baden-Württemberg, Germany",
+                "designer": "Michael Mauer",
+                "class": "Sports car",
+                "body-style": "2-door roadster (Spyder), 2-door coupé (RSR)",
+                "layout": "M4 layout with all-wheel steering",
+                "engine": "4.6 L V8 + 2 electric motors on front and rear axle",
+                "consumption": "11 l/100 km (22 mpg) combined",
+                "transmission": "7-speed PDK dual-clutch",
+                "horsepower": "887 bhp (661 kW)",
+                "torque": "1,280 N·m (940 lb·ft)",
+                "speed": "351 km/h (218 mph)",
+                "acceleration": "2.5 seconds",
+                "wheelbase": "2,730 mm (107.5 in)",
+                "length": "4,643 mm (182.8 in)",
+                "width": "1,940 mm (76.4 in)",
+                "height": "1,167 mm (45.9 in)",
+                "curb-weight": "1,634–1,675 kg (3,600–3,690 lb)",
+                "price": "€760,000 ($847,000), (£652,000)"
+            }
         },
         {
             "title": "Koenigsegg One:1",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Koenigsegg_One-1_-_Gen%C3%A8ve_2014_-_01.jpg",
+            "image": "http://localhost:8080/images/Koenigsegg_One-1.jpg",
             "desc": "The Koenigsegg One:1 was presented at the March 2014 Geneva Motor Show.",
-            "text": "Koenigsegg will build six cars apart from the car presented at the Geneva Motor Show. All the cars have already been sold. Koenigsegg brought two cars to the 2014 Goodwood Festival of Speed, where it was displayed alongside other supercars such as the McLaren P1, the Ferrari LaFerrari, the Porsche 918 Spyder and the Pagani Huayra. The name One:1 comes from the power (1361 PS) to weight (1361 kg) ratio giving the car 1 PS per 1 kg weight. The 1361 PS power output is the equivalent of one megawatt, which Koenigsegg claims makes the One:1 the ‘world's first megacar’. The car is more focused as a track car than the previous cars made by Koenigsegg. Koenigsegg had to sacrifice a few things to be able to achieve their goal with the car. There is an airscoop on the removable roof, so it would not have been possible to stow the roof in the trunk like previous models. As such, Koenigsegg have taken advantage of this and modeled the front to create more downforce, which reduces trunk capacity by 40%. The Koenigsegg One:1 is fitted with a variant of the same 5.0-litre twin-turbocharged V8 engine used in the other Ageras. It produces 1,361 PS (1,001 kW) at 7500 rpm and 1,371 N·m (1,011 lb·ft) of torque at 6000 rpm. Total weight of the engine is only 197 kg (434 lb) thanks to a carbon fiber intake manifold and the aluminium construction. The transmission is a 7-speed dual clutch paddle shift."
+            "text": "Koenigsegg will build six cars apart from the car presented at the Geneva Motor Show. All the cars have already been sold. Koenigsegg brought two cars to the 2014 Goodwood Festival of Speed, where it was displayed alongside other supercars such as the McLaren P1, the Ferrari LaFerrari, the Porsche 918 Spyder and the Pagani Huayra. The name One:1 comes from the power (1361 PS) to weight (1361 kg) ratio giving the car 1 PS per 1 kg weight. The 1361 PS power output is the equivalent of one megawatt, which Koenigsegg claims makes the One:1 the ‘world's first megacar’. The car is more focused as a track car than the previous cars made by Koenigsegg. Koenigsegg had to sacrifice a few things to be able to achieve their goal with the car. There is an airscoop on the removable roof, so it would not have been possible to stow the roof in the trunk like previous models. As such, Koenigsegg have taken advantage of this and modeled the front to create more downforce, which reduces trunk capacity by 40%. The Koenigsegg One:1 is fitted with a variant of the same 5.0-litre twin-turbocharged V8 engine used in the other Ageras. It produces 1,361 PS (1,001 kW) at 7500 rpm and 1,371 N·m (1,011 lb·ft) of torque at 6000 rpm. Total weight of the engine is only 197 kg (434 lb) thanks to a carbon fiber intake manifold and the aluminium construction. The transmission is a 7-speed dual clutch paddle shift.",
+            "specs": {
+                "manufacturer": "Porsche",
+                "production": "2013 – 2015",
+                "assembly": "Stuttgart, Baden-Württemberg, Germany",
+                "designer": "Michael Mauer",
+                "class": "Sports car",
+                "body-style": "2-door roadster (Spyder), 2-door coupé (RSR)",
+                "layout": "M4 layout with all-wheel steering",
+                "engine": "4.6 L V8 + 2 electric motors on front and rear axle",
+                "consumption": "11 l/100 km (22 mpg) combined",
+                "transmission": "7-speed PDK dual-clutch",
+                "horsepower": "887 bhp (661 kW)",
+                "torque": "1,280 N·m (940 lb·ft)",
+                "speed": "351 km/h (218 mph)",
+                "acceleration": "2.5 seconds",
+                "wheelbase": "2,730 mm (107.5 in)",
+                "length": "4,643 mm (182.8 in)",
+                "width": "1,940 mm (76.4 in)",
+                "height": "1,167 mm (45.9 in)",
+                "curb-weight": "1,634–1,675 kg (3,600–3,690 lb)",
+                "price": "€760,000 ($847,000), (£652,000)"
+            }
         }
     ]
 }

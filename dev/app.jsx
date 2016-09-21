@@ -5,6 +5,7 @@ import AppView from './components/AppView.jsx';
 import Home from './components/Home.jsx';
 import Cars from './components/Cars.jsx';
 import Car from './components/Car.jsx';
+import Compare from './components/Compare.jsx';
 
 render((
 
@@ -19,6 +20,8 @@ render((
                 <Route path="/cars/:title" component={Car}/>
 
             </Route>
+            
+            <Route path="/compare" component={Compare}/>
 
         </Route>
 

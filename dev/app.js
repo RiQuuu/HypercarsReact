@@ -26,6 +26,10 @@ var _componentsCarJsx = require('./components/Car.jsx');
 
 var _componentsCarJsx2 = _interopRequireDefault(_componentsCarJsx);
 
+var _componentsCompareJsx = require('./components/Compare.jsx');
+
+var _componentsCompareJsx2 = _interopRequireDefault(_componentsCompareJsx);
+
 (0, _reactDom.render)(_react2['default'].createElement(
             _reactRouter.Router,
             { history: _reactRouter.browserHistory },
@@ -37,6 +41,7 @@ var _componentsCarJsx2 = _interopRequireDefault(_componentsCarJsx);
                                     _reactRouter.Route,
                                     { path: '/cars', component: _componentsCarsJsx2['default'] },
                                     _react2['default'].createElement(_reactRouter.Route, { path: '/cars/:title', component: _componentsCarJsx2['default'] })
-                        )
+                        ),
+                        _react2['default'].createElement(_reactRouter.Route, { path: '/compare', component: _componentsCompareJsx2['default'] })
             )
 ), document.getElementById('main'));

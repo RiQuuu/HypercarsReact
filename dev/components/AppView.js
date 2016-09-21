@@ -1,7 +1,7 @@
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
-    value: true
+        value: true
 });
 
 var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
@@ -31,134 +31,141 @@ var _NavLinkJsx = require('./NavLink.jsx');
 var _NavLinkJsx2 = _interopRequireDefault(_NavLinkJsx);
 
 var AppView = (function (_React$Component) {
-    _inherits(AppView, _React$Component);
+        _inherits(AppView, _React$Component);
 
-    function AppView(props, context) {
-        _classCallCheck(this, AppView);
+        function AppView(props, context) {
+                _classCallCheck(this, AppView);
 
-        _get(Object.getPrototypeOf(AppView.prototype), 'constructor', this).call(this, props, context);
+                _get(Object.getPrototypeOf(AppView.prototype), 'constructor', this).call(this, props, context);
 
-        this.state = {
-            cars: [],
-            showResults: false
-        };
+                this.state = { cars: [], showResults: false };
 
-        this.showCars = this.showCars.bind(this);
-    }
-
-    _createClass(AppView, [{
-        key: 'showCars',
-        value: function showCars() {
-
-            this.setState({ showResults: !this.state.showResults });
+                this.showCars = this.showCars.bind(this);
         }
-    }, {
-        key: 'componentDidMount',
-        value: function componentDidMount() {
 
-            var th = this;
+        _createClass(AppView, [{
+                key: 'showCars',
+                value: function showCars() {
 
-            this.serverRequest = _axios2['default'].get('http://localhost:8080/cars.json').then((function (result) {
+                        this.setState({ showResults: !this.state.showResults });
+                }
+        }, {
+                key: 'componentDidMount',
+                value: function componentDidMount() {
 
-                th.setState({ cars: result.data.cars });
-            }).bind(this));
-        }
-    }, {
-        key: 'componentWillUnmount',
-        value: function componentWillUnmount() {
-            this.serverRequest.abort();
-        }
-    }, {
-        key: 'shouldComponentUpdate',
-        value: function shouldComponentUpdate(nextProps, nextState) {
-            return true;
-        }
-    }, {
-        key: 'render',
-        value: function render() {
+                        this.serverRequest = _axios2['default'].get('http://localhost:8080/cars.json').then((function (result) {
 
-            var currentLocation = this.props.location.pathname;
+                                this.setState({ cars: result.data.cars });
+                        }).bind(this));
+                }
+        }, {
+                key: 'componentWillUnmount',
+                value: function componentWillUnmount() {
 
-            var position = undefined;
+                        this.serverRequest.abort();
+                }
+        }, {
+                key: 'shouldComponentUpdate',
+                value: function shouldComponentUpdate(nextProps, nextState) {
 
-            if (currentLocation == '/' || currentLocation == '/cars') {
+                        return true;
+                }
+        }, {
+                key: 'render',
+                value: function render() {
 
-                position = this.props.children;
-            } else {
+                        var currentLocation = this.props.location.pathname;
 
-                position = this.props.children.props.children;
-            }
+                        var position = undefined;
 
-            return _react2['default'].createElement(
-                _reactBootstrap.Grid,
-                { id: 'page', fluid: true },
-                _react2['default'].createElement(
-                    _reactBootstrap.Navbar,
-                    { className: 'navbar', fixedTop: true, inverse: true, fluid: true },
-                    _react2['default'].createElement(
-                        _reactBootstrap.Navbar.Header,
-                        null,
-                        _react2['default'].createElement(
-                            _reactBootstrap.Navbar.Brand,
-                            null,
-                            _react2['default'].createElement(
-                                _reactRouter.Link,
-                                { to: '/' },
-                                'ReactTest'
-                            )
-                        )
-                    ),
-                    _react2['default'].createElement(
-                        'ul',
-                        { className: 'nav-links' },
-                        _react2['default'].createElement(
-                            'li',
-                            null,
-                            _react2['default'].createElement(
-                                _NavLinkJsx2['default'],
-                                { to: '/', onlyActiveOnIndex: true },
-                                'Home'
-                            )
-                        ),
-                        _react2['default'].createElement(
-                            'li',
-                            null,
-                            _react2['default'].createElement(
-                                _NavLinkJsx2['default'],
-                                { to: '/cars', onClick: this.showCars },
-                                'Cars'
-                            )
-                        ),
-                        this.state.showResults ? _react2['default'].createElement(
-                            'ul',
-                            null,
-                            this.state.cars.map(function (car, i) {
+                        if (currentLocation == '/' || currentLocation == '/cars' || currentLocation == '/compare') {
 
-                                var titleName = '/cars/' + car.title;
+                                position = this.props.children;
+                        } else {
 
-                                return _react2['default'].createElement(
-                                    'li',
-                                    { key: i },
-                                    _react2['default'].createElement(
-                                        _NavLinkJsx2['default'],
-                                        { key: i, to: titleName },
-                                        car.title
-                                    )
-                                );
-                            })
-                        ) : null
-                    )
-                ),
-                _react2['default'].createElement(
-                    _reactBootstrap.Grid,
-                    { className: 'content' },
-                    position
-                )
-            );
-        }
-    }]);
+                                position = this.props.children.props.children;
+                        }
 
-    return AppView;
+                        return _react2['default'].createElement(
+                                _reactBootstrap.Grid,
+                                { id: 'page', fluid: true },
+                                _react2['default'].createElement(
+                                        _reactBootstrap.Navbar,
+                                        { className: 'navbar', fixedTop: true, inverse: true, fluid: true },
+                                        _react2['default'].createElement(
+                                                _reactBootstrap.Navbar.Header,
+                                                null,
+                                                _react2['default'].createElement(
+                                                        _reactBootstrap.Navbar.Brand,
+                                                        null,
+                                                        _react2['default'].createElement(
+                                                                _reactRouter.Link,
+                                                                { to: '/' },
+                                                                'ReactTest'
+                                                        )
+                                                )
+                                        ),
+                                        _react2['default'].createElement(
+                                                'ul',
+                                                { className: 'nav-links' },
+                                                _react2['default'].createElement(
+                                                        'li',
+                                                        null,
+                                                        _react2['default'].createElement(
+                                                                _NavLinkJsx2['default'],
+                                                                { to: '/', onlyActiveOnIndex: true },
+                                                                'Home'
+                                                        )
+                                                ),
+                                                _react2['default'].createElement(
+                                                        'li',
+                                                        null,
+                                                        _react2['default'].createElement(
+                                                                _NavLinkJsx2['default'],
+                                                                { to: '/cars' },
+                                                                'Cars',
+                                                                _react2['default'].createElement(_reactBootstrap.Glyphicon, { glyph: 'glyphicon glyphicon-chevron-down', onClick: this.showCars })
+                                                        )
+                                                ),
+                                                this.state.showResults ? _react2['default'].createElement(
+                                                        'ul',
+                                                        null,
+                                                        this.state.cars.map(function (car, i) {
+
+                                                                var titleName = '/cars/' + car.title;
+
+                                                                return _react2['default'].createElement(
+                                                                        'li',
+                                                                        { key: i },
+                                                                        _react2['default'].createElement(
+                                                                                _NavLinkJsx2['default'],
+                                                                                { key: i, to: titleName },
+                                                                                car.title
+                                                                        )
+                                                                );
+                                                        })
+                                                ) : null,
+                                                _react2['default'].createElement(
+                                                        'li',
+                                                        null,
+                                                        _react2['default'].createElement(
+                                                                _NavLinkJsx2['default'],
+                                                                { to: '/compare' },
+                                                                'Compare'
+                                                        )
+                                                )
+                                        )
+                                ),
+                                _react2['default'].createElement(
+                                        _reactBootstrap.Grid,
+                                        { className: 'content' },
+                                        position
+                                )
+                        );
+                }
+        }]);
+
+        return AppView;
 })(_react2['default'].Component);
 
 exports['default'] = AppView;

@@ -1,12 +1,13 @@
 import React from 'react';
 import axios from 'axios';
-import { Grid, Row, Col, Image } from 'react-bootstrap';
+import { Row, Col, Image } from 'react-bootstrap';
 
 export default class Car extends React.Component {
 
     constructor(props, context) {
 
         super(props, context);
+
         this.state = { car: [] };
 
     }
@@ -35,31 +36,46 @@ export default class Car extends React.Component {
 
         this.loadContent();
 
-    };
+    }
 
     componentWillReceiveProps() {
 
         this.loadContent();
 
-    };
+    }
 
     shouldComponentUpdate(nextProps, nextState) {
+
         return true;
-    };
+
+    }
 
     render() {
 
-        return <div id="car" className="column head-text">
+        return <Row id="car" className="column head-text">
 
-            <h2><strong>{this.props.params.title}</strong></h2>
+            <Col sm={12} md={8} mdOffset={2} >
 
-            <Image src={this.state.car.image} responsive />
+                <h2><strong>{this.props.params.title}</strong></h2>
 
-            <p className="lead">{this.state.car.desc}</p>
+            </Col>
 
-            <p className="body-text">{this.state.car.text}</p>
+            <Col sm={12} md={8} mdOffset={2} >
 
-        </div>;
+                <Image src={this.state.car.image} responsive />
+
+            </Col>
+
+            <Col sm={12} md={8} mdOffset={2} >
+
+                <p className="lead">{this.state.car.desc}</p>
+
+                <p className="body-text">{this.state.car.text}</p>
+
+            </Col>
+
+        </Row>;
 
     }
+
 }

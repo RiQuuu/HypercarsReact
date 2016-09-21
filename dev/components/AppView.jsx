@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import { Grid, Row, Col, Navbar, Nav } from 'react-bootstrap';
+import { Grid, Row, Col, Navbar, Nav, Glyphicon } from 'react-bootstrap';
 import { Link } from 'react-router';
 import NavLink from './NavLink.jsx';
 
@@ -10,10 +10,7 @@ export default class AppView extends React.Component {
 
         super(props, context);
 
-        this.state = { 
-            cars: [], 
-            showResults: false 
-        };
+        this.state = { cars: [], showResults: false };
 
         this.showCars = this.showCars.bind(this);
 
@@ -27,23 +24,25 @@ export default class AppView extends React.Component {
 
     componentDidMount() {
 
-        var th = this;
-
         this.serverRequest = axios.get('http://localhost:8080/cars.json').then(function(result) { 
 
-            th.setState({ cars: result.data.cars });
+            this.setState({ cars: result.data.cars });
 
         }.bind(this));
 
-    };
+    }
 
     componentWillUnmount() {
+
         this.serverRequest.abort();
-    };
+
+    }
 
     shouldComponentUpdate(nextProps, nextState) {
+
         return true;
-    };
+
+    }
 
     render() {
 
@@ -51,7 +50,7 @@ export default class AppView extends React.Component {
 
         let position;
 
-        if( currentLocation == '/' || currentLocation == '/cars' ) {
+        if( currentLocation == '/' || currentLocation == '/cars' || currentLocation == '/compare' ) {
 
             position = this.props.children
 
@@ -78,8 +77,10 @@ export default class AppView extends React.Component {
                 <ul className="nav-links">
 
                     <li><NavLink to= "/" onlyActiveOnIndex={true}>Home</NavLink></li>
-
-                    <li><NavLink to="/cars" onClick={this.showCars}>Cars</NavLink></li>
+                    
+                    <li>
+                        <NavLink to="/cars">Cars<Glyphicon glyph="glyphicon glyphicon-chevron-down" onClick={this.showCars} /></NavLink>
+                    </li>
 
                     { this.state.showResults ? <ul>
 
@@ -90,7 +91,9 @@ export default class AppView extends React.Component {
                             return (
 
                                 <li key={i}>
+
                                     <NavLink key={i} to={titleName}>{car.title}</NavLink>
+
                                 </li>
 
                             );
@@ -98,6 +101,8 @@ export default class AppView extends React.Component {
                         })}
 
                     </ul> : null }
+
+                    <li><NavLink to="/compare">Compare</NavLink></li>
 
                 </ul>
 

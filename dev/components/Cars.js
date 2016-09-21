@@ -35,30 +35,29 @@ var Cars = (function (_React$Component) {
         _classCallCheck(this, Cars);
 
         _get(Object.getPrototypeOf(Cars.prototype), 'constructor', this).call(this, props, context);
-        this.state = {
-            cars: []
-        };
+
+        this.state = { cars: [] };
     }
 
     _createClass(Cars, [{
         key: 'componentDidMount',
         value: function componentDidMount() {
-            var th = this;
 
             this.serverRequest = _axios2['default'].get('http://localhost:8080/cars.json').then((function (result) {
-                th.setState({
-                    cars: result.data.cars
-                });
+
+                this.setState({ cars: result.data.cars });
             }).bind(this));
         }
     }, {
         key: 'componentWillUnmount',
         value: function componentWillUnmount() {
+
             this.serverRequest.abort;
         }
     }, {
         key: 'shouldComponentUpdate',
         value: function shouldComponentUpdate(nextProps, nextState) {
+
             return true;
         }
     }, {
@@ -79,9 +78,8 @@ var Cars = (function (_React$Component) {
                             _NavLinkJsx2['default'],
                             { key: i, to: titleName },
                             _react2['default'].createElement(
-                                'div',
-                                { className: 'carthumb-holder', key: i },
-                                _react2['default'].createElement(_reactBootstrap.Image, { src: car.image, responsive: true }),
+                                _reactBootstrap.Thumbnail,
+                                { src: car.image, className: 'carthumb-holder', key: i },
                                 _react2['default'].createElement(
                                     'h3',
                                     null,

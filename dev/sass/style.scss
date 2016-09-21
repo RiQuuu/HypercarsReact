@@ -7,26 +7,30 @@ html, body {
     padding-left: 215px;
 }
 
-#cars div {
-    padding-bottom: 15px;
+#cars .carthumb-holder{
+    background-color: #4e4e4e;
 
-    .carthumb-holder{
-        min-height: 300px;
-        height: 100%;
-        position: relative;
-        background-color: #4e4e4e;
+    h3 {
+        color: #e28a8a;
+        margin-left: 10px;
 
-        h3 {
-            color: #e28a8a;
-            padding: 10px;
-            position: absolute;
-            bottom: 0;
-
-            &:hover, &:focus {
-                color: #b97272; 
-                text-decoration: none;
-            }
+        &:hover, &:focus {
+            color: #b97272; 
+            text-decoration: none;
         }
+    }
+}
+
+#car {
+
+    .head-text .lead {
+        margin-top: 20px;
+        font-size: 115%;
+        line-height: 1.5;
+    }
+
+    .body-text {
+        margin-top: 20px;
     }
 }
 
@@ -48,8 +52,17 @@ html, body {
         margin-top: 80px;
         padding: 0;
 
+        ul {
+            padding-left: 30px;
+        }
+
         li {
             list-style: none;
+
+            span {
+                left: 5px;
+                top: 2px;
+            }
         }
     }
 }
@@ -70,14 +83,4 @@ html, body {
         color: #b97272; 
         text-decoration: none;
     }
-}
-
-.head-text .lead {
-    margin-top: 20px;
-    font-size: 115%;
-    line-height: 1.5;
-}
-
-.body-text {
-    margin-top: 20px;
 }

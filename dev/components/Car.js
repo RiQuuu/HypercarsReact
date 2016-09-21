@@ -31,6 +31,7 @@ var Car = (function (_React$Component) {
         _classCallCheck(this, Car);
 
         _get(Object.getPrototypeOf(Car.prototype), 'constructor', this).call(this, props, context);
+
         this.state = { car: [] };
     }
 
@@ -66,6 +67,7 @@ var Car = (function (_React$Component) {
     }, {
         key: 'shouldComponentUpdate',
         value: function shouldComponentUpdate(nextProps, nextState) {
+
             return true;
         }
     }, {
@@ -73,27 +75,39 @@ var Car = (function (_React$Component) {
         value: function render() {
 
             return _react2['default'].createElement(
-                'div',
+                _reactBootstrap.Row,
                 { id: 'car', className: 'column head-text' },
                 _react2['default'].createElement(
-                    'h2',
-                    null,
+                    _reactBootstrap.Col,
+                    { sm: 12, md: 8, mdOffset: 2 },
                     _react2['default'].createElement(
-                        'strong',
+                        'h2',
                         null,
-                        this.props.params.title
+                        _react2['default'].createElement(
+                            'strong',
+                            null,
+                            this.props.params.title
+                        )
                     )
                 ),
-                _react2['default'].createElement(_reactBootstrap.Image, { src: this.state.car.image, responsive: true }),
                 _react2['default'].createElement(
-                    'p',
-                    { className: 'lead' },
-                    this.state.car.desc
+                    _reactBootstrap.Col,
+                    { sm: 12, md: 8, mdOffset: 2 },
+                    _react2['default'].createElement(_reactBootstrap.Image, { src: this.state.car.image, responsive: true })
                 ),
                 _react2['default'].createElement(
-                    'p',
-                    { className: 'body-text' },
-                    this.state.car.text
+                    _reactBootstrap.Col,
+                    { sm: 12, md: 8, mdOffset: 2 },
+                    _react2['default'].createElement(
+                        'p',
+                        { className: 'lead' },
+                        this.state.car.desc
+                    ),
+                    _react2['default'].createElement(
+                        'p',
+                        { className: 'body-text' },
+                        this.state.car.text
+                    )
                 )
             );
         }
