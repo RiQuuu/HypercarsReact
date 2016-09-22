@@ -68,7 +68,7 @@ export default class AppView extends React.Component {
 
                     <Navbar.Brand>
 
-                        <Link to="/">ReactTest</Link>
+                        <Link to="/">Hypercars</Link>
 
                     </Navbar.Brand>
 

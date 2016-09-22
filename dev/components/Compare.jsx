@@ -22,26 +22,26 @@ export default class Compare extends React.Component {
 
                     <Col>
                         
-                        <p><strong>Manufacturer</strong></p>
-                        <p><strong>Production</strong></p>
-                        <p><strong>Assembly</strong></p>
-                        <p><strong>Designer</strong></p>
-                        <p><strong>Class</strong></p>
-                        <p><strong>Body style</strong></p>
-                        <p><strong>Layout</strong></p>
-                        <p><strong>Engine</strong></p>
-                        <p><strong>Consumption</strong></p>
-                        <p><strong>Transmission</strong></p>
-                        <p><strong>Horsepower</strong></p>
-                        <p><strong>Torque</strong></p>
-                        <p><strong>Top speed</strong></p>
-                        <p><strong>Acceleration</strong></p>
-                        <p><strong>Wheelbase</strong></p>
-                        <p><strong>Length</strong></p>
-                        <p><strong>Width</strong></p>
-                        <p><strong>Height</strong></p>
-                        <p><strong>Curb weight</strong></p>
-                        <p><strong>Price</strong></p>
+                        <p><strong>Manufacturer</strong></p><hr/>
+                        <p><strong>Production</strong></p><hr/>
+                        <p><strong>Assembly</strong></p><hr/>
+                        <p><strong>Designer</strong></p><hr/>
+                        <p><strong>Class</strong></p><hr/>
+                        <p><strong>Body style</strong></p><hr/>
+                        <p><strong>Layout</strong></p><hr/>
+                        <p><strong>Engine</strong></p><hr/>
+                        <p><strong>Consumption</strong></p><hr/>
+                        <p><strong>Transmission</strong></p><hr/>
+                        <p><strong>Horsepower</strong></p><hr/>
+                        <p><strong>Torque</strong></p><hr/>
+                        <p><strong>Top speed</strong></p><hr/>
+                        <p><strong>Acceleration</strong></p><hr/>
+                        <p><strong>Wheelbase</strong></p><hr/>
+                        <p><strong>Length</strong></p><hr/>
+                        <p><strong>Width</strong></p><hr/>
+                        <p><strong>Height</strong></p><hr/>
+                        <p><strong>Curb weight</strong></p><hr/>
+                        <p><strong>Price</strong></p><hr/>
 
                     </Col>
 

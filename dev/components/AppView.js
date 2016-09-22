@@ -101,7 +101,7 @@ var AppView = (function (_React$Component) {
                                                         _react2['default'].createElement(
                                                                 _reactRouter.Link,
                                                                 { to: '/' },
-                                                                'ReactTest'
+                                                                'Hypercars'
                                                         )
                                                 )
                                         ),

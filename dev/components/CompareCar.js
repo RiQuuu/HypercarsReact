@@ -150,101 +150,121 @@ var CompareCar = (function (_React$Component) {
                                                 null,
                                                 this.state.manufacturer
                                         ),
+                                        _react2['default'].createElement('hr', null),
                                         _react2['default'].createElement(
                                                 'p',
                                                 null,
                                                 this.state.production
                                         ),
+                                        _react2['default'].createElement('hr', null),
                                         _react2['default'].createElement(
                                                 'p',
                                                 null,
                                                 this.state.assembly
                                         ),
+                                        _react2['default'].createElement('hr', null),
                                         _react2['default'].createElement(
                                                 'p',
                                                 null,
                                                 this.state.designer
                                         ),
+                                        _react2['default'].createElement('hr', null),
                                         _react2['default'].createElement(
                                                 'p',
                                                 null,
                                                 this.state['class']
                                         ),
+                                        _react2['default'].createElement('hr', null),
                                         _react2['default'].createElement(
                                                 'p',
                                                 null,
                                                 this.state.bodystyle
                                         ),
+                                        _react2['default'].createElement('hr', null),
                                         _react2['default'].createElement(
                                                 'p',
                                                 null,
                                                 this.state.layout
                                         ),
+                                        _react2['default'].createElement('hr', null),
                                         _react2['default'].createElement(
                                                 'p',
                                                 null,
                                                 this.state.engine
                                         ),
+                                        _react2['default'].createElement('hr', null),
                                         _react2['default'].createElement(
                                                 'p',
                                                 null,
                                                 this.state.consumption
                                         ),
+                                        _react2['default'].createElement('hr', null),
                                         _react2['default'].createElement(
                                                 'p',
                                                 null,
                                                 this.state.transmission
                                         ),
+                                        _react2['default'].createElement('hr', null),
                                         _react2['default'].createElement(
                                                 'p',
                                                 null,
                                                 this.state.horsepower
                                         ),
+                                        _react2['default'].createElement('hr', null),
                                         _react2['default'].createElement(
                                                 'p',
                                                 null,
                                                 this.state.torque
                                         ),
+                                        _react2['default'].createElement('hr', null),
                                         _react2['default'].createElement(
                                                 'p',
                                                 null,
                                                 this.state.speed
                                         ),
+                                        _react2['default'].createElement('hr', null),
                                         _react2['default'].createElement(
                                                 'p',
                                                 null,
                                                 this.state.acceleration
                                         ),
+                                        _react2['default'].createElement('hr', null),
                                         _react2['default'].createElement(
                                                 'p',
                                                 null,
                                                 this.state.wheelbase
                                         ),
+                                        _react2['default'].createElement('hr', null),
                                         _react2['default'].createElement(
                                                 'p',
                                                 null,
                                                 this.state.length
                                         ),
+                                        _react2['default'].createElement('hr', null),
                                         _react2['default'].createElement(
                                                 'p',
                                                 null,
                                                 this.state.width
                                         ),
+                                        _react2['default'].createElement('hr', null),
                                         _react2['default'].createElement(
                                                 'p',
                                                 null,
                                                 this.state.height
                                         ),
+                                        _react2['default'].createElement('hr', null),
                                         _react2['default'].createElement(
                                                 'p',
                                                 null,
                                                 this.state.curbweight
                                         ),
+                                        _react2['default'].createElement('hr', null),
                                         _react2['default'].createElement(
                                                 'p',
                                                 null,
                                                 this.state.price
-                                        )
+                                        ),
+                                        _react2['default'].createElement('hr', null)
                                 )
                         );
                 }

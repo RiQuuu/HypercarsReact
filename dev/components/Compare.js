@@ -62,6 +62,7 @@ var Compare = (function (_React$Component) {
                                                                                                             'Manufacturer'
                                                                                                 )
                                                                                     ),
+                                                                                    _react2['default'].createElement('hr', null),
                                                                                     _react2['default'].createElement(
                                                                                                 'p',
                                                                                                 null,
@@ -71,6 +72,7 @@ var Compare = (function (_React$Component) {
                                                                                                             'Production'
                                                                                                 )
                                                                                     ),
+                                                                                    _react2['default'].createElement('hr', null),
                                                                                     _react2['default'].createElement(
                                                                                                 'p',
                                                                                                 null,
@@ -80,6 +82,7 @@ var Compare = (function (_React$Component) {
                                                                                                             'Assembly'
                                                                                                 )
                                                                                     ),
+                                                                                    _react2['default'].createElement('hr', null),
                                                                                     _react2['default'].createElement(
                                                                                                 'p',
                                                                                                 null,
@@ -89,6 +92,7 @@ var Compare = (function (_React$Component) {
                                                                                                             'Designer'
                                                                                                 )
                                                                                     ),
+                                                                                    _react2['default'].createElement('hr', null),
                                                                                     _react2['default'].createElement(
                                                                                                 'p',
                                                                                                 null,
@@ -98,6 +102,7 @@ var Compare = (function (_React$Component) {
                                                                                                             'Class'
                                                                                                 )
                                                                                     ),
+                                                                                    _react2['default'].createElement('hr', null),
                                                                                     _react2['default'].createElement(
                                                                                                 'p',
                                                                                                 null,
@@ -107,6 +112,7 @@ var Compare = (function (_React$Component) {
                                                                                                             'Body style'
                                                                                                 )
                                                                                     ),
+                                                                                    _react2['default'].createElement('hr', null),
                                                                                     _react2['default'].createElement(
                                                                                                 'p',
                                                                                                 null,
@@ -116,6 +122,7 @@ var Compare = (function (_React$Component) {
                                                                                                             'Layout'
                                                                                                 )
                                                                                     ),
+                                                                                    _react2['default'].createElement('hr', null),
                                                                                     _react2['default'].createElement(
                                                                                                 'p',
                                                                                                 null,
@@ -125,6 +132,7 @@ var Compare = (function (_React$Component) {
                                                                                                             'Engine'
                                                                                                 )
                                                                                     ),
+                                                                                    _react2['default'].createElement('hr', null),
                                                                                     _react2['default'].createElement(
                                                                                                 'p',
                                                                                                 null,
@@ -134,6 +142,7 @@ var Compare = (function (_React$Component) {
                                                                                                             'Consumption'
                                                                                                 )
                                                                                     ),
+                                                                                    _react2['default'].createElement('hr', null),
                                                                                     _react2['default'].createElement(
                                                                                                 'p',
                                                                                                 null,
@@ -143,6 +152,7 @@ var Compare = (function (_React$Component) {
                                                                                                             'Transmission'
                                                                                                 )
                                                                                     ),
+                                                                                    _react2['default'].createElement('hr', null),
                                                                                     _react2['default'].createElement(
                                                                                                 'p',
                                                                                                 null,
@@ -152,6 +162,7 @@ var Compare = (function (_React$Component) {
                                                                                                             'Horsepower'
                                                                                                 )
                                                                                     ),
+                                                                                    _react2['default'].createElement('hr', null),
                                                                                     _react2['default'].createElement(
                                                                                                 'p',
                                                                                                 null,
@@ -161,6 +172,7 @@ var Compare = (function (_React$Component) {
                                                                                                             'Torque'
                                                                                                 )
                                                                                     ),
+                                                                                    _react2['default'].createElement('hr', null),
                                                                                     _react2['default'].createElement(
                                                                                                 'p',
                                                                                                 null,
@@ -170,6 +182,7 @@ var Compare = (function (_React$Component) {
                                                                                                             'Top speed'
                                                                                                 )
                                                                                     ),
+                                                                                    _react2['default'].createElement('hr', null),
                                                                                     _react2['default'].createElement(
                                                                                                 'p',
                                                                                                 null,
@@ -179,6 +192,7 @@ var Compare = (function (_React$Component) {
                                                                                                             'Acceleration'
                                                                                                 )
                                                                                     ),
+                                                                                    _react2['default'].createElement('hr', null),
                                                                                     _react2['default'].createElement(
                                                                                                 'p',
                                                                                                 null,
@@ -188,6 +202,7 @@ var Compare = (function (_React$Component) {
                                                                                                             'Wheelbase'
                                                                                                 )
                                                                                     ),
+                                                                                    _react2['default'].createElement('hr', null),
                                                                                     _react2['default'].createElement(
                                                                                                 'p',
                                                                                                 null,
@@ -197,6 +212,7 @@ var Compare = (function (_React$Component) {
                                                                                                             'Length'
                                                                                                 )
                                                                                     ),
+                                                                                    _react2['default'].createElement('hr', null),
                                                                                     _react2['default'].createElement(
                                                                                                 'p',
                                                                                                 null,
@@ -206,6 +222,7 @@ var Compare = (function (_React$Component) {
                                                                                                             'Width'
                                                                                                 )
                                                                                     ),
+                                                                                    _react2['default'].createElement('hr', null),
                                                                                     _react2['default'].createElement(
                                                                                                 'p',
                                                                                                 null,
@@ -215,6 +232,7 @@ var Compare = (function (_React$Component) {
                                                                                                             'Height'
                                                                                                 )
                                                                                     ),
+                                                                                    _react2['default'].createElement('hr', null),
                                                                                     _react2['default'].createElement(
                                                                                                 'p',
                                                                                                 null,
@@ -224,6 +242,7 @@ var Compare = (function (_React$Component) {
                                                                                                             'Curb weight'
                                                                                                 )
                                                                                     ),
+                                                                                    _react2['default'].createElement('hr', null),
                                                                                     _react2['default'].createElement(
                                                                                                 'p',
                                                                                                 null,
@@ -232,7 +251,8 @@ var Compare = (function (_React$Component) {
                                                                                                             null,
                                                                                                             'Price'
                                                                                                 )
-                                                                                    )
+                                                                                    ),
+                                                                                    _react2['default'].createElement('hr', null)
                                                                         )
                                                             )
                                                 ),

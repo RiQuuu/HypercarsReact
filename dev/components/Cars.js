@@ -73,7 +73,7 @@ var Cars = (function (_React$Component) {
 
                     return _react2['default'].createElement(
                         _reactBootstrap.Col,
-                        { xs: 6, md: 4, key: i },
+                        { xs: 12, sm: 6, md: 4, key: i },
                         _react2['default'].createElement(
                             _NavLinkJsx2['default'],
                             { key: i, to: titleName },

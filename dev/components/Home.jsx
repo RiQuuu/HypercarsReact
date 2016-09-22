@@ -11,17 +11,13 @@ export default class Home extends React.Component {
 
     static defaultProps = {
 
-        mainTitle: "Welcome to home of cars",
-
-        mainInfo: ""
+        mainTitle: "Welcome to home of cars"
 
     }
     
     static propTypes = {
 
-        mainTitle: React.PropTypes.string.isRequired,
-
-        mainInfo: React.PropTypes.string.isRequired
+        mainTitle: React.PropTypes.string.isRequired
 
     }
 
@@ -32,8 +28,6 @@ export default class Home extends React.Component {
             <Col sm={12} md={8} mdOffset={2} >
 
                 <h2>{this.props.mainTitle}</h2>
-
-                <p>{this.props.mainInfo}</p>
 
             </Col>
 

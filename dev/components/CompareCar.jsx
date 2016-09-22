@@ -115,26 +115,26 @@ export default class CompareCar extends React.Component {
 
                 <Image src={this.state.img} responsive />
 
-                <p>{this.state.manufacturer}</p>
-                <p>{this.state.production}</p>
-                <p>{this.state.assembly}</p>
-                <p>{this.state.designer}</p>
-                <p>{this.state.class}</p>
-                <p>{this.state.bodystyle}</p>
-                <p>{this.state.layout}</p>
-                <p>{this.state.engine}</p>
-                <p>{this.state.consumption}</p>
-                <p>{this.state.transmission}</p>
-                <p>{this.state.horsepower}</p>
-                <p>{this.state.torque}</p>
-                <p>{this.state.speed}</p>
-                <p>{this.state.acceleration}</p>
-                <p>{this.state.wheelbase}</p>
-                <p>{this.state.length}</p>
-                <p>{this.state.width}</p>
-                <p>{this.state.height}</p>
-                <p>{this.state.curbweight}</p>
-                <p>{this.state.price}</p>
+                <p>{this.state.manufacturer}</p><hr/>
+                <p>{this.state.production}</p><hr/>
+                <p>{this.state.assembly}</p><hr/>
+                <p>{this.state.designer}</p><hr/>
+                <p>{this.state.class}</p><hr/>
+                <p>{this.state.bodystyle}</p><hr/>
+                <p>{this.state.layout}</p><hr/>
+                <p>{this.state.engine}</p><hr/>
+                <p>{this.state.consumption}</p><hr/>
+                <p>{this.state.transmission}</p><hr/>
+                <p>{this.state.horsepower}</p><hr/>
+                <p>{this.state.torque}</p><hr/>
+                <p>{this.state.speed}</p><hr/>
+                <p>{this.state.acceleration}</p><hr/>
+                <p>{this.state.wheelbase}</p><hr/>
+                <p>{this.state.length}</p><hr/>
+                <p>{this.state.width}</p><hr/>
+                <p>{this.state.height}</p><hr/>
+                <p>{this.state.curbweight}</p><hr/>
+                <p>{this.state.price}</p><hr/>
 
             </Col>
 
