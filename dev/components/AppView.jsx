@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import { Grid, Row, Col, Navbar, Nav, Glyphicon } from 'react-bootstrap';
+import { Grid, Row, Col, Navbar, Nav, Glyphicon, Collapse } from 'react-bootstrap';
 import { Link } from 'react-router';
 import NavLink from './NavLink.jsx';
 
@@ -77,30 +77,34 @@ export default class AppView extends React.Component {
                 <ul className="nav-links">
 
                     <li><NavLink to= "/" onlyActiveOnIndex={true}>Home</NavLink></li>
-                    
+
                     <li>
                         <NavLink to="/cars">Cars<Glyphicon glyph="glyphicon glyphicon-chevron-down" onClick={this.showCars} /></NavLink>
                     </li>
 
-                    { this.state.showResults ? <ul>
+                    <Collapse in={this.state.showResults}>
 
-                        {this.state.cars.map(function(car, i) {
+                        <ul>
 
-                            let titleName = '/cars/' + car.title;
+                            {this.state.cars.map(function(car, i) {
 
-                            return (
+                                let titleName = '/cars/' + car.title;
 
-                                <li key={i}>
+                                return (
 
-                                    <NavLink key={i} to={titleName}>{car.title}</NavLink>
+                                    <li key={i}>
 
-                                </li>
+                                        <NavLink key={i} to={titleName}>{car.title}</NavLink>
 
-                            );
+                                    </li>
 
-                        })}
+                                );
 
-                    </ul> : null }
+                            })}
+
+                        </ul>
+                        
+                    </Collapse>
 
                     <li><NavLink to="/compare">Compare</NavLink></li>
 

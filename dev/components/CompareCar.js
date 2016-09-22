@@ -1,7 +1,7 @@
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
-    value: true
+        value: true
 });
 
 var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
@@ -25,106 +25,232 @@ var _axios2 = _interopRequireDefault(_axios);
 var _reactBootstrap = require('react-bootstrap');
 
 var CompareCar = (function (_React$Component) {
-    _inherits(CompareCar, _React$Component);
+        _inherits(CompareCar, _React$Component);
 
-    function CompareCar(props, context) {
-        _classCallCheck(this, CompareCar);
+        function CompareCar(props, context) {
+                _classCallCheck(this, CompareCar);
 
-        _get(Object.getPrototypeOf(CompareCar.prototype), 'constructor', this).call(this, props, context);
+                _get(Object.getPrototypeOf(CompareCar.prototype), 'constructor', this).call(this, props, context);
 
-        this.state = {
+                this.state = {
 
-            cars: [],
-            title: "Select car",
-            img: "",
-            price: "",
-            speed: ""
+                        cars: [],
+                        title: "Select car",
+                        img: "",
+                        manufacturer: "",
+                        production: "",
+                        assembly: "",
+                        designer: "",
+                        'class': "",
+                        bodystyle: "",
+                        layout: "",
+                        engine: "",
+                        consumption: "",
+                        transmission: "",
+                        horsepower: "",
+                        torque: "",
+                        speed: "",
+                        acceleration: "",
+                        wheelbase: "",
+                        length: "",
+                        width: "",
+                        height: "",
+                        curbweight: "",
+                        price: ""
 
-        };
+                };
 
-        this.changeTitle = this.changeTitle.bind(this);
-    }
-
-    _createClass(CompareCar, [{
-        key: 'componentDidMount',
-        value: function componentDidMount() {
-
-            this.serverRequest = _axios2['default'].get('http://localhost:8080/cars.json').then((function (result) {
-
-                this.setState({ cars: result.data.cars });
-            }).bind(this));
+                this.changeTitle = this.changeTitle.bind(this);
         }
-    }, {
-        key: 'shouldComponentUpdate',
-        value: function shouldComponentUpdate(nextProps, nextState) {
 
-            return true;
-        }
-    }, {
-        key: 'changeTitle',
-        value: function changeTitle(eventKey) {
+        _createClass(CompareCar, [{
+                key: 'componentDidMount',
+                value: function componentDidMount() {
 
-            this.setState({
+                        this.serverRequest = _axios2['default'].get('http://localhost:8080/cars.json').then((function (result) {
 
-                title: this.state.cars[eventKey].title,
-                img: this.state.cars[eventKey].image,
-                price: this.state.cars[eventKey].specs.price,
-                speed: this.state.cars[eventKey].specs.speed
+                                this.setState({ cars: result.data.cars });
+                        }).bind(this));
+                }
+        }, {
+                key: 'shouldComponentUpdate',
+                value: function shouldComponentUpdate(nextProps, nextState) {
 
-            });
-        }
-    }, {
-        key: 'render',
-        value: function render() {
+                        return true;
+                }
+        }, {
+                key: 'changeTitle',
+                value: function changeTitle(eventKey) {
 
-            return _react2['default'].createElement(
-                _reactBootstrap.Row,
-                null,
-                _react2['default'].createElement(
-                    _reactBootstrap.Col,
-                    null,
-                    _react2['default'].createElement(
-                        _reactBootstrap.DropdownButton,
-                        { title: this.state.title, id: 'cars-dropdown', onSelect: this.changeTitle },
-                        this.state.cars.map(function (car, i) {
+                        this.setState({
 
-                            return _react2['default'].createElement(
-                                _reactBootstrap.MenuItem,
-                                { key: i, eventKey: i },
-                                car.title
-                            );
-                        })
-                    )
-                ),
-                _react2['default'].createElement(
-                    _reactBootstrap.Col,
-                    null,
-                    _react2['default'].createElement(
-                        'h2',
-                        null,
-                        _react2['default'].createElement(
-                            'strong',
-                            null,
-                            this.state.title
-                        )
-                    ),
-                    _react2['default'].createElement(_reactBootstrap.Image, { src: this.state.img, responsive: true }),
-                    _react2['default'].createElement(
-                        'p',
-                        null,
-                        this.state.price
-                    ),
-                    _react2['default'].createElement(
-                        'p',
-                        null,
-                        this.state.speed
-                    )
-                )
-            );
-        }
-    }]);
+                                title: this.state.cars[eventKey].title,
+                                img: this.state.cars[eventKey].image,
+                                manufacturer: this.state.cars[eventKey].specs.manufacturer,
+                                production: this.state.cars[eventKey].specs.production,
+                                assembly: this.state.cars[eventKey].specs.assembly,
+                                designer: this.state.cars[eventKey].specs.designer,
+                                'class': this.state.cars[eventKey].specs['class'],
+                                bodystyle: this.state.cars[eventKey].specs.bodystyle,
+                                layout: this.state.cars[eventKey].specs.layout,
+                                engine: this.state.cars[eventKey].specs.engine,
+                                consumption: this.state.cars[eventKey].specs.consumption,
+                                transmission: this.state.cars[eventKey].specs.transmission,
+                                horsepower: this.state.cars[eventKey].specs.horsepower,
+                                torque: this.state.cars[eventKey].specs.torque,
+                                speed: this.state.cars[eventKey].specs.speed,
+                                acceleration: this.state.cars[eventKey].specs.acceleration,
+                                wheelbase: this.state.cars[eventKey].specs.wheelbase,
+                                length: this.state.cars[eventKey].specs.length,
+                                width: this.state.cars[eventKey].specs.width,
+                                height: this.state.cars[eventKey].specs.height,
+                                curbweight: this.state.cars[eventKey].specs.curbweight,
+                                price: this.state.cars[eventKey].specs.price
 
-    return CompareCar;
+                        });
+                }
+        }, {
+                key: 'render',
+                value: function render() {
+
+                        return _react2['default'].createElement(
+                                _reactBootstrap.Row,
+                                { id: 'compare-car' },
+                                _react2['default'].createElement(
+                                        _reactBootstrap.Col,
+                                        null,
+                                        _react2['default'].createElement(
+                                                _reactBootstrap.DropdownButton,
+                                                { title: this.state.title, id: 'cars-dropdown', onSelect: this.changeTitle },
+                                                this.state.cars.map(function (car, i) {
+
+                                                        return _react2['default'].createElement(
+                                                                _reactBootstrap.MenuItem,
+                                                                { key: i, eventKey: i },
+                                                                car.title
+                                                        );
+                                                })
+                                        )
+                                ),
+                                _react2['default'].createElement(
+                                        _reactBootstrap.Col,
+                                        null,
+                                        _react2['default'].createElement(
+                                                'h2',
+                                                null,
+                                                _react2['default'].createElement(
+                                                        'strong',
+                                                        null,
+                                                        this.state.title
+                                                )
+                                        ),
+                                        _react2['default'].createElement(_reactBootstrap.Image, { src: this.state.img, responsive: true }),
+                                        _react2['default'].createElement(
+                                                'p',
+                                                null,
+                                                this.state.manufacturer
+                                        ),
+                                        _react2['default'].createElement(
+                                                'p',
+                                                null,
+                                                this.state.production
+                                        ),
+                                        _react2['default'].createElement(
+                                                'p',
+                                                null,
+                                                this.state.assembly
+                                        ),
+                                        _react2['default'].createElement(
+                                                'p',
+                                                null,
+                                                this.state.designer
+                                        ),
+                                        _react2['default'].createElement(
+                                                'p',
+                                                null,
+                                                this.state['class']
+                                        ),
+                                        _react2['default'].createElement(
+                                                'p',
+                                                null,
+                                                this.state.bodystyle
+                                        ),
+                                        _react2['default'].createElement(
+                                                'p',
+                                                null,
+                                                this.state.layout
+                                        ),
+                                        _react2['default'].createElement(
+                                                'p',
+                                                null,
+                                                this.state.engine
+                                        ),
+                                        _react2['default'].createElement(
+                                                'p',
+                                                null,
+                                                this.state.consumption
+                                        ),
+                                        _react2['default'].createElement(
+                                                'p',
+                                                null,
+                                                this.state.transmission
+                                        ),
+                                        _react2['default'].createElement(
+                                                'p',
+                                                null,
+                                                this.state.horsepower
+                                        ),
+                                        _react2['default'].createElement(
+                                                'p',
+                                                null,
+                                                this.state.torque
+                                        ),
+                                        _react2['default'].createElement(
+                                                'p',
+                                                null,
+                                                this.state.speed
+                                        ),
+                                        _react2['default'].createElement(
+                                                'p',
+                                                null,
+                                                this.state.acceleration
+                                        ),
+                                        _react2['default'].createElement(
+                                                'p',
+                                                null,
+                                                this.state.wheelbase
+                                        ),
+                                        _react2['default'].createElement(
+                                                'p',
+                                                null,
+                                                this.state.length
+                                        ),
+                                        _react2['default'].createElement(
+                                                'p',
+                                                null,
+                                                this.state.width
+                                        ),
+                                        _react2['default'].createElement(
+                                                'p',
+                                                null,
+                                                this.state.height
+                                        ),
+                                        _react2['default'].createElement(
+                                                'p',
+                                                null,
+                                                this.state.curbweight
+                                        ),
+                                        _react2['default'].createElement(
+                                                'p',
+                                                null,
+                                                this.state.price
+                                        )
+                                )
+                        );
+                }
+        }]);
+
+        return CompareCar;
 })(_react2['default'].Component);
 
 exports['default'] = CompareCar;

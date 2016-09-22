@@ -127,24 +127,28 @@ var AppView = (function (_React$Component) {
                                                                 _react2['default'].createElement(_reactBootstrap.Glyphicon, { glyph: 'glyphicon glyphicon-chevron-down', onClick: this.showCars })
                                                         )
                                                 ),
-                                                this.state.showResults ? _react2['default'].createElement(
-                                                        'ul',
-                                                        null,
-                                                        this.state.cars.map(function (car, i) {
+                                                _react2['default'].createElement(
+                                                        _reactBootstrap.Collapse,
+                                                        { 'in': this.state.showResults },
+                                                        _react2['default'].createElement(
+                                                                'ul',
+                                                                null,
+                                                                this.state.cars.map(function (car, i) {
 
-                                                                var titleName = '/cars/' + car.title;
+                                                                        var titleName = '/cars/' + car.title;
 
-                                                                return _react2['default'].createElement(
-                                                                        'li',
-                                                                        { key: i },
-                                                                        _react2['default'].createElement(
-                                                                                _NavLinkJsx2['default'],
-                                                                                { key: i, to: titleName },
-                                                                                car.title
-                                                                        )
-                                                                );
-                                                        })
-                                                ) : null,
+                                                                        return _react2['default'].createElement(
+                                                                                'li',
+                                                                                { key: i },
+                                                                                _react2['default'].createElement(
+                                                                                        _NavLinkJsx2['default'],
+                                                                                        { key: i, to: titleName },
+                                                                                        car.title
+                                                                                )
+                                                                        );
+                                                                })
+                                                        )
+                                                ),
                                                 _react2['default'].createElement(
                                                         'li',
                                                         null,

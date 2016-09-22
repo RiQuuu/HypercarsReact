@@ -11,7 +11,7 @@
                 "assembly": "Modena, Italy",
                 "designer": "Horacio Pagani",
                 "class": "Sports car",
-                "body-style": "2-door coupe, 2-door roadster",
+                "bodystyle": "2-door coupe, 2-door roadster",
                 "layout": "Rear mid-engine, rear-wheel-drive",
                 "engine": "5980 cc Mercedes-AMG bi-turbo M158 V12",
                 "consumption": "21.4 l/100 km (11 mpg) in city, 13.8 l/100 km (17 mpg) in highway, 18.1 l/100 km (13 mpg) combined",
@@ -24,7 +24,7 @@
                 "length": "4,605 mm (181.3 in)",
                 "width": "2,036 mm (80.2 in)",
                 "height": "1,169 mm (46.0 in)",
-                "curb-weight": "1,350 kg (2,980 lb) (dry), 1,697 kg (3,741 lb) (wet)",
+                "curbweight": "1,350 kg (2,980 lb) (dry), 1,697 kg (3,741 lb) (wet)",
                 "price": "€1,198,000 ($1,314,000), (£910,905)"
             }
         },
@@ -39,7 +39,7 @@
                 "assembly": "Maranello, Italy",
                 "designer": "Centro Stile Ferrari under Flavio Manzoni",
                 "class": "Sports car",
-                "body-style": "2-door berlinetta, 2-door spider",
+                "bodystyle": "2-door berlinetta, 2-door spider",
                 "layout": "Rear mid-engine, rear-wheel-drive",
                 "engine": "6.3 L F140FE V12, electric motor & KERS",
                 "consumption": "19.6 l/100 km (12 mpg) city, 14.7 l/100 km (16 mpg) highway, 16.7 l/100 km (14 mpg) combined",
@@ -52,7 +52,7 @@
                 "length": "4,702 mm (185.1 in)",
                 "width": "1,992 mm (78.4 in)",
                 "height": "1,116 mm (43.9 in)",
-                "curb-weight": "1,585 kg (3,495 lb)",
+                "curbweight": "1,585 kg (3,495 lb)",
                 "price": "€1,274,000 ($1,420,000), (£1,092,000)"
             }
         },
@@ -67,7 +67,7 @@
                 "assembly": "Woking, Surrey, England",
                 "designer": "Frank Stephenson",
                 "class": "Sports car",
-                "body-style": "2-door coupé",
+                "bodystyle": "2-door coupé",
                 "layout": "Mid-engine, rear-wheel-drive",
                 "engine": "3.8 L twin-turbo M838TQ V8 & McLaren electric ECU motor",
                 "consumption": "14.7 l/100 km (16 mpg) city, 11.8 l/100 km (20 mpg) highway, 13.8 l/100 km (17 mpg) combined",
@@ -80,7 +80,7 @@
                 "length": "4,588 mm (181 in)",
                 "width": "1,946 mm (77 in)",
                 "height": "1,188 mm (47 in)",
-                "curb-weight": "1,547 kg (3,411 lb)",
+                "curbweight": "1,547 kg (3,411 lb)",
                 "price": "€1,030,000 ($1,350,000), (£866,000)"
             }
         },
@@ -95,7 +95,7 @@
                 "assembly": "Stuttgart, Baden-Württemberg, Germany",
                 "designer": "Michael Mauer",
                 "class": "Sports car",
-                "body-style": "2-door roadster (Spyder), 2-door coupé (RSR)",
+                "bodystyle": "2-door roadster (Spyder), 2-door coupé (RSR)",
                 "layout": "M4 layout with all-wheel steering",
                 "engine": "4.6 L V8 + 2 electric motors on front and rear axle",
                 "consumption": "11 l/100 km (22 mpg) combined",
@@ -108,7 +108,7 @@
                 "length": "4,643 mm (182.8 in)",
                 "width": "1,940 mm (76.4 in)",
                 "height": "1,167 mm (45.9 in)",
-                "curb-weight": "1,634–1,675 kg (3,600–3,690 lb)",
+                "curbweight": "1,634–1,675 kg (3,600–3,690 lb)",
                 "price": "€760,000 ($847,000), (£652,000)"
             }
         },
@@ -118,26 +118,26 @@
             "desc": "The Koenigsegg One:1 was presented at the March 2014 Geneva Motor Show.",
             "text": "Koenigsegg will build six cars apart from the car presented at the Geneva Motor Show. All the cars have already been sold. Koenigsegg brought two cars to the 2014 Goodwood Festival of Speed, where it was displayed alongside other supercars such as the McLaren P1, the Ferrari LaFerrari, the Porsche 918 Spyder and the Pagani Huayra. The name One:1 comes from the power (1361 PS) to weight (1361 kg) ratio giving the car 1 PS per 1 kg weight. The 1361 PS power output is the equivalent of one megawatt, which Koenigsegg claims makes the One:1 the ‘world's first megacar’. The car is more focused as a track car than the previous cars made by Koenigsegg. Koenigsegg had to sacrifice a few things to be able to achieve their goal with the car. There is an airscoop on the removable roof, so it would not have been possible to stow the roof in the trunk like previous models. As such, Koenigsegg have taken advantage of this and modeled the front to create more downforce, which reduces trunk capacity by 40%. The Koenigsegg One:1 is fitted with a variant of the same 5.0-litre twin-turbocharged V8 engine used in the other Ageras. It produces 1,361 PS (1,001 kW) at 7500 rpm and 1,371 N·m (1,011 lb·ft) of torque at 6000 rpm. Total weight of the engine is only 197 kg (434 lb) thanks to a carbon fiber intake manifold and the aluminium construction. The transmission is a 7-speed dual clutch paddle shift.",
             "specs": {
-                "manufacturer": "Porsche",
-                "production": "2013 – 2015",
-                "assembly": "Stuttgart, Baden-Württemberg, Germany",
-                "designer": "Michael Mauer",
+                "manufacturer": "Koenigsegg",
+                "production": "2015 - present",
+                "assembly": "Ängelholm, Sweden",
+                "designer": "Christian von Koenigsegg",
                 "class": "Sports car",
-                "body-style": "2-door roadster (Spyder), 2-door coupé (RSR)",
-                "layout": "M4 layout with all-wheel steering",
-                "engine": "4.6 L V8 + 2 electric motors on front and rear axle",
-                "consumption": "11 l/100 km (22 mpg) combined",
-                "transmission": "7-speed PDK dual-clutch",
-                "horsepower": "887 bhp (661 kW)",
-                "torque": "1,280 N·m (940 lb·ft)",
-                "speed": "351 km/h (218 mph)",
-                "acceleration": "2.5 seconds",
-                "wheelbase": "2,730 mm (107.5 in)",
-                "length": "4,643 mm (182.8 in)",
-                "width": "1,940 mm (76.4 in)",
-                "height": "1,167 mm (45.9 in)",
-                "curb-weight": "1,634–1,675 kg (3,600–3,690 lb)",
-                "price": "€760,000 ($847,000), (£652,000)"
+                "bodystyle": "2-door targa top",
+                "layout": "Rear mid-engine, rear-wheel-drive",
+                "engine": "5.0L V8, dual Turbo",
+                "consumption": "14,7 l/100 km (16 mpg) combined",
+                "transmission": "7-speed dual clutch paddle shift",
+                "horsepower": "1,346 bhp (1,004 kW)",
+                "torque": "1,371 N·m (1,011 lb·ft)",
+                "speed": "451 km/h (280 mph)",
+                "acceleration": "2.8 seconds",
+                "wheelbase": "2,662 mm (104.8 in)",
+                "length": "4,500 mm (177.1 in)",
+                "width": "2,060 mm (81.1 in)",
+                "height": "1,150 mm (45.3 in)",
+                "curbweight": "1360 kg (2998 lb)",
+                "price": "€2,085,000 ($2,340,000), (£1,790,000)"
             }
         }
     ]

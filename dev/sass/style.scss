@@ -34,6 +34,36 @@ html, body {
     }
 }
 
+#compare {
+    display: table;
+
+    .compare-cols {
+        float: none;
+        display: table-cell;
+    }
+}
+
+#specs-info {
+    bottom: 0;
+    position: absolute;
+
+    p {
+        height: 40px;
+    }
+}
+
+#compare-car {
+    padding: 0 10px;
+
+    img {
+        padding-bottom: 20px;
+    }
+
+    p {
+        height: 40px;
+    }
+}
+
 .content {
     padding-top: 45px;
     width: 100%;

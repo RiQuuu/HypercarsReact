@@ -1,7 +1,7 @@
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
-    value: true
+            value: true
 });
 
 var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
@@ -9,6 +9,8 @@ var _createClass = (function () { function defineProperties(target, props) { for
 var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; desc = parent = getter = undefined; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) arr2[i] = arr[i]; return arr2; } else { return Array.from(arr); } }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 
@@ -25,36 +27,230 @@ var _CompareCarJsx = require('./CompareCar.jsx');
 var _CompareCarJsx2 = _interopRequireDefault(_CompareCarJsx);
 
 var Compare = (function (_React$Component) {
-    _inherits(Compare, _React$Component);
+            _inherits(Compare, _React$Component);
 
-    function Compare(props, context) {
-        _classCallCheck(this, Compare);
+            function Compare(props, context) {
+                        _classCallCheck(this, Compare);
 
-        _get(Object.getPrototypeOf(Compare.prototype), 'constructor', this).call(this, props, context);
-    }
+                        _get(Object.getPrototypeOf(Compare.prototype), 'constructor', this).call(this, props, context);
+            }
 
-    _createClass(Compare, [{
-        key: 'render',
-        value: function render() {
+            _createClass(Compare, [{
+                        key: 'render',
+                        value: function render() {
 
-            return _react2['default'].createElement(
-                _reactBootstrap.Row,
-                { id: 'compare' },
-                _react2['default'].createElement(
-                    _reactBootstrap.Col,
-                    { md: 6 },
-                    _react2['default'].createElement(_CompareCarJsx2['default'], null)
-                ),
-                _react2['default'].createElement(
-                    _reactBootstrap.Col,
-                    { md: 6 },
-                    _react2['default'].createElement(_CompareCarJsx2['default'], null)
-                )
-            );
-        }
-    }]);
+                                    console.log.apply(console, _toConsumableArray(this.props));
 
-    return Compare;
+                                    return _react2['default'].createElement(
+                                                _reactBootstrap.Row,
+                                                { id: 'compare' },
+                                                _react2['default'].createElement(
+                                                            _reactBootstrap.Col,
+                                                            { xs: 2, className: 'compare-cols' },
+                                                            _react2['default'].createElement(
+                                                                        _reactBootstrap.Row,
+                                                                        { id: 'specs-info' },
+                                                                        _react2['default'].createElement(
+                                                                                    _reactBootstrap.Col,
+                                                                                    null,
+                                                                                    _react2['default'].createElement(
+                                                                                                'p',
+                                                                                                null,
+                                                                                                _react2['default'].createElement(
+                                                                                                            'strong',
+                                                                                                            null,
+                                                                                                            'Manufacturer'
+                                                                                                )
+                                                                                    ),
+                                                                                    _react2['default'].createElement(
+                                                                                                'p',
+                                                                                                null,
+                                                                                                _react2['default'].createElement(
+                                                                                                            'strong',
+                                                                                                            null,
+                                                                                                            'Production'
+                                                                                                )
+                                                                                    ),
+                                                                                    _react2['default'].createElement(
+                                                                                                'p',
+                                                                                                null,
+                                                                                                _react2['default'].createElement(
+                                                                                                            'strong',
+                                                                                                            null,
+                                                                                                            'Assembly'
+                                                                                                )
+                                                                                    ),
+                                                                                    _react2['default'].createElement(
+                                                                                                'p',
+                                                                                                null,
+                                                                                                _react2['default'].createElement(
+                                                                                                            'strong',
+                                                                                                            null,
+                                                                                                            'Designer'
+                                                                                                )
+                                                                                    ),
+                                                                                    _react2['default'].createElement(
+                                                                                                'p',
+                                                                                                null,
+                                                                                                _react2['default'].createElement(
+                                                                                                            'strong',
+                                                                                                            null,
+                                                                                                            'Class'
+                                                                                                )
+                                                                                    ),
+                                                                                    _react2['default'].createElement(
+                                                                                                'p',
+                                                                                                null,
+                                                                                                _react2['default'].createElement(
+                                                                                                            'strong',
+                                                                                                            null,
+                                                                                                            'Body style'
+                                                                                                )
+                                                                                    ),
+                                                                                    _react2['default'].createElement(
+                                                                                                'p',
+                                                                                                null,
+                                                                                                _react2['default'].createElement(
+                                                                                                            'strong',
+                                                                                                            null,
+                                                                                                            'Layout'
+                                                                                                )
+                                                                                    ),
+                                                                                    _react2['default'].createElement(
+                                                                                                'p',
+                                                                                                null,
+                                                                                                _react2['default'].createElement(
+                                                                                                            'strong',
+                                                                                                            null,
+                                                                                                            'Engine'
+                                                                                                )
+                                                                                    ),
+                                                                                    _react2['default'].createElement(
+                                                                                                'p',
+                                                                                                null,
+                                                                                                _react2['default'].createElement(
+                                                                                                            'strong',
+                                                                                                            null,
+                                                                                                            'Consumption'
+                                                                                                )
+                                                                                    ),
+                                                                                    _react2['default'].createElement(
+                                                                                                'p',
+                                                                                                null,
+                                                                                                _react2['default'].createElement(
+                                                                                                            'strong',
+                                                                                                            null,
+                                                                                                            'Transmission'
+                                                                                                )
+                                                                                    ),
+                                                                                    _react2['default'].createElement(
+                                                                                                'p',
+                                                                                                null,
+                                                                                                _react2['default'].createElement(
+                                                                                                            'strong',
+                                                                                                            null,
+                                                                                                            'Horsepower'
+                                                                                                )
+                                                                                    ),
+                                                                                    _react2['default'].createElement(
+                                                                                                'p',
+                                                                                                null,
+                                                                                                _react2['default'].createElement(
+                                                                                                            'strong',
+                                                                                                            null,
+                                                                                                            'Torque'
+                                                                                                )
+                                                                                    ),
+                                                                                    _react2['default'].createElement(
+                                                                                                'p',
+                                                                                                null,
+                                                                                                _react2['default'].createElement(
+                                                                                                            'strong',
+                                                                                                            null,
+                                                                                                            'Top speed'
+                                                                                                )
+                                                                                    ),
+                                                                                    _react2['default'].createElement(
+                                                                                                'p',
+                                                                                                null,
+                                                                                                _react2['default'].createElement(
+                                                                                                            'strong',
+                                                                                                            null,
+                                                                                                            'Acceleration'
+                                                                                                )
+                                                                                    ),
+                                                                                    _react2['default'].createElement(
+                                                                                                'p',
+                                                                                                null,
+                                                                                                _react2['default'].createElement(
+                                                                                                            'strong',
+                                                                                                            null,
+                                                                                                            'Wheelbase'
+                                                                                                )
+                                                                                    ),
+                                                                                    _react2['default'].createElement(
+                                                                                                'p',
+                                                                                                null,
+                                                                                                _react2['default'].createElement(
+                                                                                                            'strong',
+                                                                                                            null,
+                                                                                                            'Length'
+                                                                                                )
+                                                                                    ),
+                                                                                    _react2['default'].createElement(
+                                                                                                'p',
+                                                                                                null,
+                                                                                                _react2['default'].createElement(
+                                                                                                            'strong',
+                                                                                                            null,
+                                                                                                            'Width'
+                                                                                                )
+                                                                                    ),
+                                                                                    _react2['default'].createElement(
+                                                                                                'p',
+                                                                                                null,
+                                                                                                _react2['default'].createElement(
+                                                                                                            'strong',
+                                                                                                            null,
+                                                                                                            'Height'
+                                                                                                )
+                                                                                    ),
+                                                                                    _react2['default'].createElement(
+                                                                                                'p',
+                                                                                                null,
+                                                                                                _react2['default'].createElement(
+                                                                                                            'strong',
+                                                                                                            null,
+                                                                                                            'Curb weight'
+                                                                                                )
+                                                                                    ),
+                                                                                    _react2['default'].createElement(
+                                                                                                'p',
+                                                                                                null,
+                                                                                                _react2['default'].createElement(
+                                                                                                            'strong',
+                                                                                                            null,
+                                                                                                            'Price'
+                                                                                                )
+                                                                                    )
+                                                                        )
+                                                            )
+                                                ),
+                                                _react2['default'].createElement(
+                                                            _reactBootstrap.Col,
+                                                            { xs: 5, className: 'compare-cols' },
+                                                            _react2['default'].createElement(_CompareCarJsx2['default'], null)
+                                                ),
+                                                _react2['default'].createElement(
+                                                            _reactBootstrap.Col,
+                                                            { xs: 5, className: 'compare-cols' },
+                                                            _react2['default'].createElement(_CompareCarJsx2['default'], null)
+                                                )
+                                    );
+                        }
+            }]);
+
+            return Compare;
 })(_react2['default'].Component);
 
 exports['default'] = Compare;
