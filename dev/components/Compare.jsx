@@ -11,8 +11,6 @@ export default class Compare extends React.Component {
     }
 
     render() {
-        
-        console.log(...this.props);
 
         return <Row id="compare">
 

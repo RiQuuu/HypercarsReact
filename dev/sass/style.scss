@@ -7,6 +7,28 @@ html, body {
     padding-left: 215px;
 }
 
+#home {
+
+    .news-holder {
+        height: 250px;
+        position: relative;
+        background-color: #4e4e4e;
+        color: #e28a8a;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+
+        h4 {
+            text-decoration: none;
+            color: #ececec;
+        }
+
+        .publishDate {
+            position: absolute;
+            bottom: 0;
+        }
+    }
+}
+
 #cars .carthumb-holder{
     background-color: #4e4e4e;
 
