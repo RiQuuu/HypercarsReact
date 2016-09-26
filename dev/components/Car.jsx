@@ -52,21 +52,21 @@ export default class Car extends React.Component {
 
     render() {
 
-        return <Row id="car" className="column head-text">
+        return <Row id="car">
 
-            <Col sm={12} md={8} mdOffset={2} >
+            <Col sm={12} >
 
                 <h2><strong>{this.props.params.title}</strong></h2>
 
             </Col>
 
-            <Col sm={12} md={8} mdOffset={2} >
+            <Col sm={12} >
 
                 <Image src={this.state.car.image} responsive />
 
             </Col>
 
-            <Col sm={12} md={8} mdOffset={2} >
+            <Col sm={12} >
 
                 <p className="lead">{this.state.car.desc}</p>
 

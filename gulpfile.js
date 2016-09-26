@@ -57,9 +57,7 @@ function bundle(bundler) {
         .pipe(sourcemaps.init({loadMaps: true})) // Extract the inline sourcemaps
         .pipe(sourcemaps.write('./map')) // Set folder for sourcemaps to output to
         .pipe(gulp.dest(config.js.outputDir)) // Set the output folder
-        .pipe(notify({
-        message: 'Generated file: <%= file.relative %>',
-    })) // Output the file being created
+        .pipe(notify({ message: 'Generated file: <%= file.relative %>', })) // Output the file being created
         .pipe(bundleTimer) // Output time timing of the file creation
 }
 
@@ -77,10 +75,14 @@ gulp.task('sass', function() {
     return gulp.src('./dev/sass/**/*.scss')
         .pipe(sass())
         .pipe(gulp.dest('dist/css'));
-})
+});
+
+gulp.task('watch-sass', function () {
+  return gulp.watch('./dev/sass/**/*.scss', ['sass']);
+});
 
 // Gulp task for build
-gulp.task('default', ['sass', 'server'], function() {
+gulp.task('default', ['sass', 'watch-sass', 'server'], function() {
     var args = merge(watchify.args, { debug: true }); // Merge in default watchify args with browserify arguments
 
     var bundler = browserify(config.js.src, args) // Browserify

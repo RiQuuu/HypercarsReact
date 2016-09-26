@@ -91,7 +91,7 @@ export default class CompareCar extends React.Component {
 
         return <Row id="compare-car">
 
-            <Col>
+            <Col sm={12} className="select-car">
 
                 <DropdownButton title={this.state.title} id="cars-dropdown" onSelect={this.changeTitle} >
 
@@ -109,9 +109,7 @@ export default class CompareCar extends React.Component {
 
             </Col>
 
-            <Col>
-
-                <h2><strong>{this.state.title}</strong></h2>
+            <Col sm={12} >
 
                 <Image src={this.state.img} responsive />
 

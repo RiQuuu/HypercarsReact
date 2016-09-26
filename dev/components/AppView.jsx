@@ -10,7 +10,7 @@ export default class AppView extends React.Component {
 
         super(props, context);
 
-        this.state = { cars: [], showResults: false };
+        this.state = { cars: [], showResults: true };
 
         this.showCars = this.showCars.bind(this);
 

@@ -3,107 +3,32 @@ html, body {
     width: 100%;
 }
 
-#page {
-    padding-left: 215px;
+h2 {
+    font-size: 3em;
 }
 
-#home {
-
-    .news-holder {
-        height: 250px;
-        position: relative;
-        background-color: #4e4e4e;
-        color: #e28a8a;
-        border: 1px solid #ddd;
-        border-radius: 4px;
-
-        h4 {
-            text-decoration: none;
-            color: #ececec;
-        }
-
-        .publishDate {
-            position: absolute;
-            bottom: 0;
-        }
-    }
+h3 {
+    font-size: 2.5em;
 }
 
-#cars .carthumb-holder{
-    background-color: #4e4e4e;
-
-    h3 {
-        color: #e28a8a;
-        margin-left: 10px;
-
-        &:hover, &:focus {
-            color: #b97272; 
-            text-decoration: none;
-        }
-    }
+h4 {
+    font-size: 2em;
 }
 
-#car {
-
-    .head-text .lead {
-        margin-top: 20px;
-        font-size: 115%;
-        line-height: 1.5;
-    }
-
-    .body-text {
-        margin-top: 20px;
-    }
+p {
+    font-size: 1.6em;
 }
 
-#compare {
-    display: table;
-    width: 100%;
-    padding: 0 10px;
-
-    .compare-cols {
-        float: none;
-        display: table-cell;
-    }
+img {
+    padding-bottom: 20px;
 }
 
-#specs-info {
-    bottom: 0;
-    position: absolute;
-
-    p {
-        height: 40px;
-        margin-bottom: 0;
-    }
-
-    hr {
-        margin-top: 0;
-        border: none;
-        height: 1px;
-        color: #000000;
-        background-color: #000000;
-    }
-}
-
-#compare-car {
-    padding: 0 10px;
-
-    img {
-        padding-bottom: 20px;
-    }
-
-    p {
-        height: 40px;
-        margin-bottom: 0;
-    }
-
-    hr {
-        margin-top: 0;
-        border: none;
-        height: 1px;
-        color: #000000;
-        background-color: #000000;
-    }
+hr {
+    margin-top: 0;
+    border: none;
+    height: 1px;
+    color: #000000;
+    background-color: #000000;
 }
 
 .content {
@@ -112,12 +37,12 @@ html, body {
 }
 
 .navbar {
-    width: 200px;
+    width: 300px;
     height: 100%;
     padding-top: 40px;
 
     .navbar-brand {
-        font-size: 37px;
+        font-size: 4em;
     }
 
     .nav-links {
@@ -130,6 +55,7 @@ html, body {
 
         li {
             list-style: none;
+            font-size: 2em;
 
             span {
                 left: 5px;
@@ -155,4 +81,135 @@ html, body {
         color: #b97272; 
         text-decoration: none;
     }
+}
+
+#page {
+    padding-left: 315px;
+}
+
+#home .news-holder {
+    height: 250px;
+    position: relative;
+    background-color: #4e4e4e;
+    color: #e28a8a;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+
+    h4 {
+        text-decoration: none;
+        color: #ececec;
+    }
+
+    .publishDate {
+        position: absolute;
+        bottom: 0;
+    }
+}
+
+#cars .carthumb-holder{
+    background-color: #4e4e4e;
+
+    h3 {
+        color: #e28a8a;
+        margin-left: 10px;
+
+        &:hover, &:focus {
+            color: #b97272; 
+            text-decoration: none;
+        }
+    }
+}
+
+#car {
+    .lead {
+        margin-top: 20px;
+        font-size: 1.6em;
+        font-weight: 700;
+    }
+
+    .body-text {
+        margin-top: 20px;
+    }
+}
+
+#compare {
+    display: table;
+    width: 100%;
+    padding: 0 10px;
+
+    .compare-cols {
+        float: none;
+        display: table-cell;
+    }
+
+    .hide-specs {
+        display: none;
+    }
+}
+
+#specs-info {
+    bottom: 0;
+    position: absolute;
+
+    p {
+        height: 40px;
+        margin-bottom: 0;
+    }
+}
+
+#compare-car {
+    padding: 0 10px;
+
+    p {
+        height: 60px;
+        margin-bottom: 0;
+    }
+
+    .select-car {
+        padding-bottom: 20px;
+    }
+}
+
+@media (min-width: 992px) {
+
+    h2 {
+        font-size: 1.875em;
+    }
+
+    h3 {
+        font-size: 1.500em;
+    }
+
+    h4 {
+        font-size: 1.125em;
+    }
+
+    p {
+        font-size: 0.875em;
+    }
+
+    .navbar {
+        width: 200px;
+
+        .navbar-brand {
+            font-size: 2em;
+        }
+
+        .nav-links li {
+            font-size: 1em;
+        }
+    }
+
+    #page {
+        padding-left: 215px;
+    }
+
+    #compare .hide-specs {
+        display: table-cell;
+    }
+
+    #compare-car p {
+        height: 40px;
+    }
+
 }

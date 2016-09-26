@@ -45,7 +45,7 @@ export default class Cars extends React.Component {
 
                 return (        
 
-                    <Col xs={12} sm={6} md={4} key={i}>
+                    <Col sm={12} md={4} key={i}>
 
                         <NavLink key={i} to={titleName}>
 

@@ -52,69 +52,37 @@ export default class Home extends React.Component {
 
             <Col xs={12} >
 
-                <h2>{this.props.mainTitle}</h2>
-
-                <Row>
-
-                    {this.state.news.map(function(headlines, i) {
-
-                        /*const pubTime = headlines.publishedDateJS;
-
-                        const from = pubTime.split("T");
-
-                        const date = from[0].split("-");
-
-                        const time = from[1].split(":");
-
-                        const seconds = time[2].split(".");
-
-                        const milliseconds = seconds[1].slice(0, -1);
-
-                        let f = new Date(date[0], date[1], date[2], time[0], time[1], seconds[0], milliseconds);
-
-                        console.log(f);*/
-
-                        return (
-
-                            <Col xs={12} sm={6} md={3} key={i}>
-
-                                <a href={headlines.link} key={i} target="_blank">
-
-                                    <Well className="news-holder" key={i}>
-
-                                        <p>{headlines.author}</p>
-
-                                        <h4>{headlines.title}</h4>
-                                        
-                                        <p className="publishDate">{headlines.publishedDate}</p>
-
-                                        {/*<PublishTime data={f} />*/}
-
-                                    </Well>
-
-                                </a>
-
-                            </Col>
-
-                        );
-                    })}
-
-                </Row>
+                <h2><strong>{this.props.mainTitle}</strong></h2>
 
             </Col>
+
+            {this.state.news.map(function(headlines, i) {
+
+                return (
+
+                    <Col sm={12} md={4} key={i}>
+
+                        <a href={headlines.link} key={i} target="_blank">
+
+                            <Well className="news-holder" key={i}>
+
+                                <p>{headlines.author}</p>
+
+                                <h4>{headlines.title}</h4>
+
+                                <p className="publishDate">{headlines.publishedDate}</p>
+
+                            </Well>
+
+                        </a>
+
+                    </Col>
+
+                );
+            })}
 
         </Row>;
 
     }
 
 }
-
-/*export default class PublishTime extends React.Component {
-    
-    render() {
-
-    return <p className="publishDate">{this.props.data}</p>;
-        
-    }
-
-}*/

@@ -14,12 +14,12 @@ export default class Compare extends React.Component {
 
         return <Row id="compare">
 
-            <Col xs={2} className="compare-cols">
+            <Col md={2} className="compare-cols hide-specs">
 
                 <Row id="specs-info">
 
-                    <Col>
-                        
+                    <Col md={12} >
+
                         <p><strong>Manufacturer</strong></p><hr/>
                         <p><strong>Production</strong></p><hr/>
                         <p><strong>Assembly</strong></p><hr/>
@@ -47,13 +47,13 @@ export default class Compare extends React.Component {
 
             </Col>
 
-            <Col xs={5} className="compare-cols">
+            <Col sm={6} md={5} className="compare-cols">
 
                 <CompareCar />
 
             </Col>
 
-            <Col xs={5} className="compare-cols">
+            <Col sm={6} md={5} className="compare-cols">
 
                 <CompareCar />
 
