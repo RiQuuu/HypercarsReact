@@ -106,16 +106,31 @@ hr {
     }
 }
 
-#cars .carthumb-holder{
-    background-color: #4e4e4e;
+#cars {
+    input[type=text]{
+        font: inherit;
+        border: 6px solid #4e4e4e;
+        padding: 13px 12px;
+        font-size: 1.6em;
+        box-shadow: 0 1px 1px #DDD;
+        width: 100%;
+        outline: none;
+        display: block;
+        color: #7B8585;
+        margin: 0 auto 20px;
+    }
 
-    h3 {
-        color: #e28a8a;
-        margin-left: 10px;
+    .carthumb-holder{
+        background-color: #4e4e4e;
 
-        &:hover, &:focus {
-            color: #b97272; 
-            text-decoration: none;
+        h3 {
+            color: #e28a8a;
+            margin-left: 10px;
+
+            &:hover, &:focus {
+                color: #b97272; 
+                text-decoration: none;
+            }
         }
     }
 }
@@ -135,7 +150,6 @@ hr {
 #compare {
     display: table;
     width: 100%;
-    padding: 0 10px;
 
     .compare-cols {
         float: none;
@@ -154,6 +168,8 @@ hr {
     p {
         height: 40px;
         margin-bottom: 0;
+        vertical-align: middle;
+        display: table-cell;
     }
 }
 
@@ -161,12 +177,43 @@ hr {
     padding: 0 10px;
 
     p {
-        height: 60px;
+        height: 70px;
         margin-bottom: 0;
+        vertical-align: middle;
+        display: table-cell;
     }
 
     .select-car {
         padding-bottom: 20px;
+
+        .dropdown {
+            width: 100%;
+
+            .dropdown-menu {
+                font: inherit;
+                border-bottom: 6px solid #4e4e4e;
+                border-left: 6px solid #4e4e4e;
+                border-right: 6px solid #4e4e4e;
+                padding: 13px 12px;
+                font-size: 1.6em;
+                box-shadow: 0 1px 1px #DDD;
+                outline: none;
+                color: #7B8585;
+                margin: 0;
+            }
+
+            #cars-dropdown {
+                font: inherit;
+                border: 6px solid #4e4e4e;
+                padding: 13px 12px;
+                font-size: 1.6em;
+                box-shadow: 0 1px 1px #DDD;
+                width: 100%;
+                outline: none;
+                display: block;
+                color: #7B8585;
+            }
+        }
     }
 }
 

@@ -4,7 +4,6 @@ import { Row, Col, Well } from 'react-bootstrap';
 
 export default class Home extends React.Component {
 
-
     constructor(props) {
 
         super(props);
@@ -50,7 +49,7 @@ export default class Home extends React.Component {
 
         return <Row id="home">
 
-            <Col xs={12} >
+            <Col sm={12} >
 
                 <h2><strong>{this.props.mainTitle}</strong></h2>
 
@@ -60,7 +59,7 @@ export default class Home extends React.Component {
 
                 return (
 
-                    <Col sm={12} md={4} key={i}>
+                    <Col sm={12} md={4} lg={3} key={i}>
 
                         <a href={headlines.link} key={i} target="_blank">
 
